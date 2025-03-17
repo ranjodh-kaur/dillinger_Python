@@ -3310,6 +3310,7 @@ element: A
 A in ['A', '123', 'Ramana', [1, 2], 34.56, '55'] is: True
 A not in ['A', '123', 'Ramana', [1, 2], 34.56, '55'] is: False
 
+````python
 # Program to illustrate membership operators
 L1 = ['A', '123', 'Ramana', [1, 2], 34.56, '55']
 # for 34.56 returns False as output because, the input() takes the input as string.
@@ -3322,7 +3323,152 @@ e=input("element: ")
 print(e, "in", L1 ,"is:",e in L1 )
 # check whether the element is not present in L1 and print the result
 print(e, "not in", L1, "is:",e not in L1 )
+````
+____
+# Unit 1 - Lesson 13
+_____
+#### 13.1.1. Identity Operators - An overview
+
+1. **Identity Operators :**
+Every object has an identity, a type and a value. An object’s identity remains unchanged once created, you may consider it as the object’s memory address.
+The ‘is‘ operator compares the identity of two objects, the id() function returns an integer representing its identity (currently implemented as its address).
+
+2. **id(object) :**
+Returns the "identity" of an object. This is an integer that is ensured to be unique and constant for the object throughout its lifetime.Usually, this is the address of the object in memory.
+When two integer or string variables share the same value, they refer to the same memory location.
+However, this is not the case with floating-point numbers, lists, tuples, and dictionaries.
+An identity operator is employed to verify the memory location of the operands, and the outcome is determined based on the memory location.
+The identity operators in Python are "is" and "is not".
+
+1. is: If two objects are in the same memory, then it means they are the same objects. So the result is True.
+
+For Example :
+````python
+a = 10
+b = 10
+c = a is b
+````
+Here c is True.
+
+Note:
+- Small integers (-5 to 256 both included) are interned in Python since they are used so often.
+- It's an optimization. x = 5, y = 5, x is y => True because id(x) == id(y).
+- It's important to note that the same integer object can be reused in Python due to the immutability of integers.
+- If you do x = 1.0, y = 1.0 or x = 9999, y = 9999, it won't be the same identity, because floats and larger ints aren't interned.
 
 
+2. is not: If two objects are in different memory locations, then it means they are different objects and so they are not equal. So the result is False.
+
+For Example :
+
+````c = a is not b````
+Here c is False.
+
+Note: Two integers or strings with the same value, point to the same memory location, but two floats or any other objects point to two different locations.
+````python
+str1 = 'abcdef'
+str2 = 'abcdef'
+print(str1 is str2)
+````
+**will be True**
+````python
+f1 = 78.98
+f2 = 78.98
+print(f1 is f2)
+# will be False.
+f2 = f1
+# Now f1 is f2 will be True
+````
+
+This logic is the same for lists, sets, tuples, dictionaries etc.
+
+**Important Note**: The is operator is used to compare whether both identifiers point to the same object or not (Ids are compared), whereas == operator is used to compare the values. is operator is used very rarely.
+
+#### 13.1.2. Identity Operators - An overview
+
+Take two integers x and y as input from the console using input() function. For each identity operator is and is not, print to the console, the result of the two input integers as shown in the example.
+
+Similarly Take two floating point numbers x and y as input from the console using input() function. For each identity operator is and is not, print to the console, the result of the two float numbers as shown in the example.
+
+Sample Input and Output:
+Enter an integer: 20
+Enter the same integer: 20
+x is y True
+x is not y False
+Enter a Float Number: 2.3
+Enter the same Number: 2.3
+x is y False
+x is not y True
+
+````python
+x = int(input("Enter an integer: "))
+y = int(input("Enter the same integer: "))
+
+#use identity operators and write the code
+print("x is y",x is y)
+print("x is not y",x is not y)
+
+x = float(input("Enter a Float Number: "))
+y = float(input("Enter the same Number: "))
+
+#use identity operators and write the code
+print("x is y",x is y)
+print("x is not y",x is not y)
+````
+
+#### 13.1.3. Writing using Identity "is"
+
+Take two integers x and y as input from the console using input() function. Using the identity operator is check if x and y are the same objects or not, print to the console, the result of the two input integers as shown in the example.
+
+You almost never have any reason to be concerned about whether two immutable values are identical. It's generally recommended to use the equality operator (a == b) for comparisons, except in two specific cases:
+
+When aiming for more readable comparisons to singleton values, such as checking if a variable is None, the identity operator (x is None) can provide better clarity.
+
+
+When dealing with mutable values, it's essential to use the identity operator in scenarios where you need to determine whether modifying one variable will impact another.
+
+Sample Input and Output1:
+x: 23
+y: 23
+23 is 23 True
+Sample Input and Output2:
+x: -9
+y: -9
+-9 is -9 False
+
+````python
+#write your code here..
+x = int(input("x: "))
+y = int(input("y: "))
+
+#use identity operators and write the code
+print(x,"is",y,x is y)
+````
+
+#### 13.1.4. Writing an example using identity operator "is not"
+
+Take two integers x and y as input from the console using input() function. Using the identity operator is not check if x and y are same objects or not, print to the console, the result of the two input integers as shown in the example.
+
+Sample Input and Output 1:
+x: -8
+y: -8
+-8 is not -8 True
+
+Sample Input and Output 2:
+x: 256
+y: 256
+256 is not 256 False
+````python
+# Take user input for x
+x = int(input("x: "))
+y = int(input("y: "))
+
+#use identity operators and write the code
+
+# Take user input for y
+
+# check whether x is not y and print the result
+print(x, 'is not', y, x is not y    )
+````
 
 

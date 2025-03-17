@@ -412,3 +412,127 @@ currentTime = "Sun Jan 27 2019 18:35:36 GMT+0530 (India Standard Time)"
 ````
 
 **Note:** At any given point of time, a variable can hold only one value.
+
+##### 4.1.2. Assigning Different Values to Variables
+
+Associating a value with a variable using the assignment operator (=) is called as binding.
+
+In Python, when you assign a value to a variable, you're actually creating a reference to that value, not making a copy.
+
+Python uses reference semantics, which means that variables essentially point to objects rather than containing the objects themselves.
+
+We cannot use Python variables without assigning any value.
+
+If we try to use a variable without assigning any value then, the Python interpreter shows an error saying "name is not defined".
+
+**Fill the missing code in the given program as per the below instructions:**
+1. Assign the variable value1 with value 99
+2. Assign the variable value2 with string value "Hello Python"
+3. Assign the variable value3 with string value "Hello World"
+then print the variables in the same order.
+
+**Expected Output:**
+````
+Hello
+Hello
+Hello
+99
+Hello Python
+Hello World
+````
+**Source code:**
+````python
+value1 = value2 = value3 = "Hello"
+print(value1)
+print(value2)
+print(value3)
+# Assign values to variables and print again
+value1 = 99
+value2 = "Hello Python"
+value3 = "Hello World"
+print(value1)
+print(value2)
+print(value3)
+````
+
+##### 4.1.3. Assignment of Variables
+
+Python variables do not need explicit declaration to reserve memory space.
+
+The declaration happens automatically when you assign a value to a variable.
+
+The equals to sign (=) is used to assign values to variables.
+
+The operand to the left of the = operator is the name of the variable and the operand (or expression) to the right of the = operator is the value stored in the variable.
+
+**Let us consider the below example:**
+````python
+counter = 100 # An integer assignment 
+print(counter) # Prints 100
+miles = 1000.50 # A floating point assignment
+print(miles) # Prints 1000.5
+name = "John" # A string assignment
+print(name) # Prints John
+````
+
+In the above example 100, 1000.50, and "John" are the values assigned to the variables counter, miles, and name respectively.
+
+The above example program produces the result as:
+````
+100
+1000.5
+John
+````
+
+**Complete the given code in which :**
+
+- A variable kilometers is created and you need to assign an integer value to it.
+- A variable convertfactor is created and 0.621371 is assigned to it.
+- Calculate the product of kilometers and convertfactor and assign it to miles variable which is already created.
+- Print the value of miles as Miles: miles where miles is the calculated value.
+````
+Sample Input: Enter·a·value:·6
+Expected Output:
+Miles:·3.7282260000000003
+````
+**Source code:**
+````python
+kilometers = int(input("Enter a value: ")) # assign the correct value
+convertfactor = 0.621371 # assign the correct value
+
+miles =  (kilometers) * (convertfactor)# multiply kilometers and convertfactor
+
+print("Miles:",  miles )
+
+````
+
+##### 4.1.4. Understanding Multiple Assignment
+
+Python allows you to assign a single value to several variables simultaneously.
+
+Let us consider an example:
+````number1 = number2 = number3 = 100````
+Here an integer object is created with the value 100, and all the three variables are references to the same memory location. This is called chained assignment.
+
+We can also assign multiple objects to multiple variables, this is called multiple assignment.
+
+Let us consider the below example:
+````value1, value2, value3 = 1, 2.5, "Ram"````
+Here the integer object with value 1 is assigned to variable value1, the float object with value 2.5 is assigned to variable value2 and the string object with the value "Ram" is assigned to the variable value3.
+
+**Fill in the missing code in the given program to assign the integer value 25 to the variable named age, float value 24.789 to the variable named length and the string value "Python" to the variable named language using multiple assignment syntax so that their individual values are printed by the existing code.**
+
+````
+Expected Output:
+999
+24.789
+Python
+````
+
+**Source code:**
+````python
+age,length,language =25,24.789,"Python"  # Assign the values to the variables
+print(age)
+print(length)
+print(language)
+````

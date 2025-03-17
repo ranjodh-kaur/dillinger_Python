@@ -3180,6 +3180,7 @@ Enter day: MON
 Not Weekend
 Hint: Consider the days of the week are represented as MON, TUE, WED, THU, FRI, SAT, SUN
 
+````python
 # Program to illustrate logical not
 a = input("Enter day: ")
 
@@ -3187,10 +3188,11 @@ if a=="SAT" or a=="SUN":
 	print("Weekend")
 else:
 	print("Not Weekend")
-	
+````
+
 Membership Operators
-12.2.1. The membership operators
-06:14
+#### 12.2.1. The membership operators
+
 The membership operators in Python are used to test the presence of an operand in a String, List, Tuple, etc. The result of this operator is a Boolean value (either True or False).
 
 The membership operators in Python are:
@@ -3213,7 +3215,7 @@ For strings, the Left Hand Side (LHS) can be any string. If this string exists i
 For all other data types (Lists, Tuples, Sets, Dictionaries, etc.) the LHS should be a single element.
 
 Let's consider an example for strings:
-
+````python
 'am' in 'I am working'
 will return True
 
@@ -3242,13 +3244,13 @@ will return True
 
 'Life' in  ['code', 'is', 'life']
 will return False
-
+````
 For tuples and sets, the example is similar to that of list
 
 Let's consider an example for dictionary:
 
 For dictionary the in operator checks existence of the key.
-
+````python
 basket = {'apple':20, 'orange':30, 'apple':10, 'pear':15, 'banana':25}
 
 'apple' in basket
@@ -3256,10 +3258,10 @@ returns True
 
 'grape' in basket 
 returns False
+````
 
+#### 12.2.2. Membership Operators - an Overview
 
-12.2.2. Membership Operators - an Overview
-04:27
 Take two strings as input from the console using input() function. Write a program using membership operators to check whether the given second string is present in the first string or not. Print the result of the two input strings to the console, as shown in the example.
 
 Sample Input and Output1:
@@ -3272,14 +3274,14 @@ str1: Regular Expression
 str2: advanced
 advanced in Regular Expression: False
 Follow the instructions and write the code in the space provided
-
+````python
 str1 = input("str1: ")
 str2 = input("str2: ")
 
 print(f"{str2} in {str1} :",str2 in str1)
+````
+#### 12.2.3. Writing example using Membership operator in
 
-12.2.3. Writing example using Membership operator in
-01:06
 Take two strings as input from the console using input() function. For each membership operator in and not in, print to the console, the result of the two input strings as shown in the example.
 
 Sample Input and Output:
@@ -3288,6 +3290,7 @@ str2: worlds
 worlds in Hello World is: False
 worlds not in Hello World is: True
 
+````python
 # Program to illustrate in and not in for strings
 str1 = input("str1: ")
 substr = input("str2: ")
@@ -3297,9 +3300,9 @@ print(substr, "in", str1, "is:", substr in str1)
 
 #check whether substr not in str1 and print the result
 print(substr, "not in", str1, "is:",substr not in str1       )
+````
+#### 12.2.4. Write an example using Membership operator not in
 
-12.2.4. Write an example using Membership operator not in
-08:31
 Let's write a simple program using the membership operator in and not in.
 
 The below program has a predefined list. Take an input element from the user to check whether the given element is present in the list or not. Print the result as shown in the example.

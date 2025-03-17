@@ -286,6 +286,60 @@ Below are a few important points regarding comments:
 4. One cannot write comments inside string literals which are enclosed between single-quotes or double-quotes. The # character inside a string literal is treated as part of the string's content.
 5. In a comment anything written after # in a particular line is ignored by the interpreter. Meaning it does not form part of the executable code in the program.
 
+**Make the following changes in the code given:**
+- Remove the comment on the line which prints "I am a Python Guru"
+- Add a comment on the line which prints "Python is not cool"
+````python
+# This is my first program
+# print("I am a Python Guru")
+print("Python is not cool")
+# print() is used to print the message on console
+````
+
+**Source code:**
+````python
+# This is my first program
+print("I am a Python Guru")
+# print("Python is not cool")
+# print() is used to print the message on console
+````
+
+#### 3.1.2. Problem Solving in Comments
+
+Comment and uncomment appropriate lines of code so that the given program prints only odd numbers.
+````python
+# print("1")
+# print("2")
+# print("3")
+# print("4")
+print("5")
+print("6")
+print("7")
+print("8")
+print("9")
+# print("10")
+# print("11")
+# print("12")
+# print("13")
+````
+
+**Source code:**
+````python
+print("1")
+# print("2")
+print("3")
+# print("4")
+print("5")
+#print("6")
+print("7")
+#print("8")
+print("9")
+# print("10")
+print("11")
+# print("12")
+print("13")
+````
+
 #### 3.1.3. Understanding Docstring in Python
 
 **Docstrings:**
@@ -344,6 +398,26 @@ print(add.__doc__)
 
 output:
 None
+````
+
+**Write the print statements in the code editor to print the one-line docstring for add() method and the multi-line docstring of power() method.**
+
+````python
+def add(a, b):
+	"""Return sum of given arguments."""
+	return a + b
+
+def power(b, e):
+	"""Return the power value.
+	
+	b -- is the base
+	e -- is the exponent
+	"""
+	return b ** e
+
+print(add.__doc__)# print docstring of add method
+
+print(power.__doc__)# print docstring of power method
 ````
 
 #### 3.2.1. Understanding Identifiers in Python
@@ -418,6 +492,22 @@ The output of the above program is:
 
 To check whether a given word is a Python keyword or not, we use a built-in function iskeyword(). This function returns a boolean value, if the given word is a keyword then it returns True as output otherwise returns False.
 
+#### 3.2.3. Fill in the missing code
+
+Fill in the missing code in the below program to print whether the given words - exec, nonlocal and False are keywords or not in Python .
+
+Hint: See how the word and is verified to be a keyword or not.
+
+````python
+import keyword
+print('and is a keyword :', keyword.iskeyword('and'))
+
+#Fill in the missing code in the below lines
+print('exec is a keyword :',keyword.iskeyword('exec') )
+print('nonlocal is a keyword :',keyword.iskeyword('nonlocal') )
+print('False is a keyword :',keyword.iskeyword('False') )
+````
+
 _________
 # Unit 1 - Lesson 4
 _______
@@ -454,6 +544,14 @@ currentTime = "Sun Jan 27 2019 18:35:36 GMT+0530 (India Standard Time)"
 
 **Note:** At any given point of time, a variable can hold only one value.
 
+**Fill in the missing code as per the instructions given in the comments.**
+````python
+# In the below line, assign value 18 to the length variable
+length = 18
+# In the below line, assign value "King Cobra" to the snake variable
+snake = "King Cobra"
+print(snake, "can grow up to a length of", length, "feet")
+````
 ##### 4.1.2. Assigning Different Values to Variables
 
 Associating a value with a variable using the assignment operator (=) is called as binding.

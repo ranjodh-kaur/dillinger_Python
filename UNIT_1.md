@@ -1331,3 +1331,1583 @@ print(list1)
 
 ````
 
+7.2.1. Introduction to Set
+04:46
+A set is a mutable data type that contains an unordered collection of items. A set is represented with { }.
+
+Every element in the set should be unique (no duplicates) and must be immutable (which cannot be changed). But the set itself is mutable. We can add or remove items / elements from it.
+Note: Mutable data types like list, set and dictionary cannot become elements of a set.
+
+The set itself is mutable i.e. we can add or remove elements from the set.
+
+The main uses of sets are:
+ Membership testing
+Removing duplicates from a sequence
+Performing mathematical operations such as intersection, union, difference, and symmetric difference
+
+Creation of sets
+1. One way to create a set is by using built-in function set()
+
+Empty set
+An empty set can be created using built-in set() function.
+
+myset = set()
+print(myset)       # Result: set()
+print(type(myset)) # <class 'set'>
+2. Another way to create a set is to put all elements inside curly braces separated by commas.
+myset1 = {1, 2, 3} 
+print(myset1)       # Result: {1, 2, 3}
+print(type(myset1)) # Result: <class 'set'>
+Note : Empty curly braces { } does not make an empty set in Python, it makes an empty dictionary instead. Dictionary data type is introduced in the upcoming lessons.
+test = { } 
+print(type(test)) Result: <class 'dict'>
+
+7.3.1. Introduction to Tuple
+16:44
+A tuple in Python is similar to a list, but with important distinctions:
+
+Lists are enclosed in square brackets [], and their elements and size can change (mutable). Tuples are enclosed in parentheses () and are unchangeable (immutable).
+Tuples are similar as read-only lists, providing a performance advantage during iteration due to their immutability.
+Once defined, you can't add or remove elements from a tuple.
+You can convert a tuple to a list to modify its elements and revert it to a tuple later.
+
+
+Creating a tuple:
+
+Use the built-in tuple() function.
+An empty tuple can be created with tuple1 = tuple().
+tuple1 = tuple()
+print(tuple1) # Result: ()
+Tuples can be defined by placing items within parentheses, separated by commas.
+The parentheses are optional but it is a good practice to write them.
+A one-element tuple must require a trailing comma, like (1,).
+mytuple = (1, 2, 3, "Data types")
+print(mytuple)        # Result: (1, 2, 3, "Data types")
+print(type(mytuple))  # Result: <class 'tuple'>
+Be cautious with single-element tuples:
+
+(1) is interpreted as an integer, not a tuple. Use (1,) for a one-element tuple.
+Consider the following program:
+
+mytuple = (1)
+print(mytuple)       # Result: 1
+print(type(mytuple)) # Result: <class 'int'>
+
+
+One-element tuples can be created as follows :
+
+mytuple = (1,)
+print(mytuple)       # Result: (1,)
+print(type(mytuple)) # Result: <class 'tuple'>/span>
+
+
+Multiple-element tuples:
+
+Trailing commas in multiple-element tuples are optional.
+
+Multiple-element tuple looks like this:
+
+(1, 2, 3) or 1, 2, 3
+
+(or)
+
+(1, 2, 3,) or 1, 2,
+
+
+
+Note:
+
+The trailing comma is mandatory for the one-element tuples.
+The trailing comma is completely optional for the multiple-element tuples.
+
+
+7.3.2. Accessing elements in tuples
+09:48
+Individual elements of the tuple can be accessed using index similar to lists.
+
+tuple1 = ("hi", "hello", 55, 66)
+print(tuple1[0]) # Printing the element at the  0th index of the tuple, tuple1
+
+Output:
+hi
+Negative index values can also be used to access the individual elements. -1 represents the last element, -2 represents the second last element and so on.
+
+tuple1 = ("hi", "hello", 55, 66)
+print(tuple1[-2]) # Printing the second last element of the tuple.  
+
+Output:
+55
+Trying to access an element using an index outside the range results in an IndexError.
+
+tuple1 = ("hi", "hello", 55, 66)
+print(tuple1[4]) # Printing the element at the 4th index of the tuple, tuple1 results in an IndexError.
+
+Output:
+Traceback (most recent call last):  
+	File "1.py", line 2, in     
+		print(tuple1[4])
+IndexError: tuple index out of range
+Reassigning any value to tuple element results in an TypeError as tuples are immutable.
+
+ 
+tuple1 = ('hi', 'hello', 55, 66) 
+tuple1[1]= 'world' # Reassigning a value to an element of tuple results in a TypeError. 
+
+Output : 
+Traceback (most recent call last):
+	File "1.py", line 2, in 
+		tuple1[1]= 'world'
+TypeError: 'tuple' object does not support item assignment
+Write the missing code in the program and understand the result. Follow the instructions given in the editor
+
+````python
+value1 = input("first value: ")
+value2 = input("second value: ")
+value3 = input("third value: ")
+value4 = input("fourth value: ")
+value5 = input("fifth value: ")
+mytuple =(value1,value2,value3,value4,value5) # create tuple with the above 5 inputs
+print(mytuple)
+# Print value at index 0
+print(mytuple[0])
+# Print value at index 1
+print(mytuple[1])
+# Print value at index -1
+print(mytuple[-1])
+# Print all the values from index 0
+print(mytuple[0::])
+# Print all the values except the last value
+print(mytuple[0:-1])
+print(mytuple[::-1])
+````
+7.3.3. Converting a tuple into a list and a list into a tuple
+09:37
+It is possible to convert tuples into lists and vice versa using built-in functions like tuple() and list()
+
+Converting a tuple into a list
+
+A tuple can be converted into a list using the built-in list() function.
+
+tuple1 = ('hi', 'hello', 55, 66) # Creating a tuple, tuple1
+print(tuple1) # Printing tuple1 , output contains values enclosed in parentheses indicating a tuple
+print(type(tuple1)) # Printing the type of tuple1
+
+list1 = list(tuple1) # Converting the tuple1 into a list using list() function.
+print(list1) # Printing list1 , output contains values enclosed in square brackets indicating a tuple
+print(type(list1))
+
+Output :
+('hi', 'hello', 55, 66)
+<class 'tuple'>
+['hi', 'hello', 55, 66]
+<class 'list'>
+Converting a list into a tuple
+
+A list can be converted into a tuple using the built-in tuple() function.
+
+tuple1 = ('hi', 'hello', 55, 66) # Creating a tuple, tuple1
+print("Given tuple :",tuple1) 
+list1 = list(tuple1) # Converting the tuple to a list using built-in list() function.
+print("After conversion of tuple to list :",list1) 
+list1[2] = "fifty five"  # Updating the value of element at 2nd index. This does not result in an error as the lists are mutable.
+print("List after changing the element :",list1) 
+tuple1 = tuple(list1)  # Converting the list back to tuple using the built-in tuple() method.
+print("After converting list into tuple :",tuple1) # Printing the final tuple with the updated element at 2nd index.
+
+Output :
+Given tuple : ('hi', 'hello', 55, 66)
+After conversion of tuple to list : ['hi', 'hello', 55, 66]
+List after changing the element : ['hi', 'hello', 'fifty five', 66]
+After converting list into tuple : ('hi', 'hello', 'fifty five', 66)
+To modify an individual element in a tuple, follow these steps:
+Convert the tuple into a list.
+Update the desired element within the list.
+Convert the modified list back into a tuple.
+
+Write a program to convert the tuple into list. Follow the instructions given below:
+ In the below program tuple values are initialized
+ Print the element using the print statement "Given Tuple:"
+ Convert the tuple into list using list function
+ After converting print the list elements using the print statement "After Converting Tuple into List:"
+ Change the value at index 1 to practice in the list
+ Print the list using the print statement "List after changing element:"
+ Convert the list into tuple and print the final tuple elements using the statement "After Converting List into Tuple:"
+The result should be as follows:
+Given Tuple: ('i', 'love', 'python')
+After Converting Tuple into List: ['i', 'love', 'python']
+List after changing element: ['i', 'practice', 'python']
+After Converting List into Tuple: ('i', 'practice', 'python')
+
+````python
+mytuple = ("i", "love", "python")
+
+# Write the missing code here
+print("Given Tuple:",mytuple)
+list1=list(mytuple)
+
+print("After Converting Tuple into List:",   list1  )
+
+list1[1]="practice"
+print("List after changing element:",list1)
+
+tuple=tuple(list1)
+print("After Converting List into Tuple:",   tuple  )
+````
+
+______
+# Unit 1 - Lesson 8
+________
+
+8.1.1. Introduction to Dictionary
+06:41
+Dictionaries:
+Dictionary is an unordered collection of key and value pairs.
+General usage of dictionaries is to store key-value pairs like Employees and their wages, Countries and their capitals, Commodities and their prices etc.
+In a dictionary, the keys should be unique, but the values can be similar.
+Immutable data types like number, string, tuple etc. are used for the key and any data type is used for the value.
+Dictionaries are optimized to retrieve values when the keys are known.
+Dictionaries are represented using key-value pairs separated by commas inside curly braces {}.
+The key-value pairs are represented as key : value.
+   For example:, daily temperatures in major cities are mapped into a dictionary as { "Hyderabad" : 27 , "Chennai" : 32 , "Mumbai" : 40 }.
+Note: While other compound data types (like lists, tuples and sets) have only value as an element, a dictionary has a key : value pair
+
+
+Creating a dictionary:
+A dictionary can be created in two ways.
+
+1. Using built-in dict() function.
+
+An empty dictionary can be created as follows :
+mydict = dict()      # Creating an empty dictionary called mydict
+print(type(mydict))  # Result: <class 'dict'>
+print(mydict)        # Result: {} 
+A dictionary with elements can be created as follows :
+mydict = dict("Hyderabad" : 20, "Delhi" : 30)  # A dictionary with two key pairs is created.
+print(mydict)                                  # Result: {'Hyderabad': 20, 'Delhi': 30} 
+Note : The two key pairs are specified in the dict() function as comma separated key : value.
+
+
+2. Assigning elements directly:
+
+A dictionary is created using direct assignment as follows :
+mydict = {1:"one", 2 :"two", 3:"three"}   # Create a dictionary with three key-value pairs.
+print(mydict)                             # Result: {1:"one", 2 :"two", 3:"three"}
+print(type(mydict))                       # Result: <class 'dict'>
+
+8.1.2. Understanding Dictionary
+08:14
+Let us create a dictionary called dict1 with three keys named as name, number and age, values of dictionary are Jay , 514, and 12 and then try to get values using respective keys.
+
+1. Creating a dictionary:
+dict1 = {"name":"Jay", "number":514, "age":12}
+print(dict1)            #Result : {'name': 'Jay', 'number': 514, 'age': 12}
+
+2. Let us retrieve the values using their keys as index:
+print(dict1['age'])     # using key called 'age', we can get value 12
+print(dict1['number'])  # using key called 'number', we can get value 514
+
+3. Let us find what happens when we try to retrieve an element (key) which is not present in the dictionary:
+print(dict1['place'])   #Results in KeyError as there is no key 'place' in the dictionary
+If the key is not there in the dictionary, we get a KeyError .
+
+4. We can change (update) the values in a dictionary.
+dict1['name'] = "Krithika"
+print(dict1)           #{'name':'Krithika' ,'number':514, 'age':12}
+
+Identify the errors in given program and correct the program.
+````python
+
+mydict = {"game":"chess","dish":"chicken","place":"home"}
+print(mydict.get('game'))
+print(mydict['dish'])
+print(mydict.get('place'))
+mydict["game"] = "cricket" # change game chess to cricket using respective key
+print(mydict['game'])
+````
+
+8.1.3. Accessing Elements of Dictionary
+06:13
+We cannot use a numerical index (as in lists, tuples and strings) to access the items/elements of the dictionaries as dictionaries are unordered(Imagine all the items of a dictionary are put in a bag and jumbled, so there is no order and we cannot retrieve the items using a sequential index.)
+
+The elements of the dictionary can be retrieved/accessed in 2 ways.
+
+1. Using the keys of the dictionary.
+capitals = {"U.S.A": "Washington D.C", "India": "New Delhi", "Nepal": "Kathmandu"}
+print(capitals["India"])        # Printing the value with the key "India" i.e. "New Delhi".
+
+Trying to access an element in the dictionary using a key that is not present in the dictionary, results in a Key Error.
+capitals = {"U.S.A": "Washington D.C", "India": "New Delhi", "Nepal": "Kathmandu"}
+print(capitals["Australia"])    # Since the key "Australia" is not present, it results in a Key Error
+
+2. Using the get() method.
+capitals = {"U.S.A": "Washington D.C", "India": "New Delhi", "Nepal": "Kathmandu"}
+print(capitals.get("India"))   # Printing the value with the key "India" i.e. "New Delhi".
+
+Trying to access a key that is not present in the dictionary using the get() method results in None
+capitals = {"U.S.A": "Washington D.C", "India": "New Delhi", "Nepal": "Kathmandu"}
+print(capitals.get("Australia")) # Since the key "Australia" is not present, it results in a "None"
+
+Write the missing code in the program to retrieve the elements of the dictionary using keys.
+````python
+# Taking input from the user for keys and values
+key1 = input("key1: ")
+value1 = input("value1: ")
+
+key2 = input("key2: ")
+value2 = input("value2: ")
+
+key3 = input("key3: ")
+value3 = input("value3: ")
+
+# Construct the dictionary with the given key and value
+dict1={key1:value1,key2:value2,key3:value3}
+print(dict1)# print the dictionary
+
+# Print the values of dictionary using keys
+print(dict1[key1])
+print(dict1[key2])
+print(dict1[key3])
+````
+
+8.2.1. Data Type Conversion - int,float
+00:45
+Converting data of one type to data of another type is called Type Conversion. Python defines various type conversion functions.
+
+1. int(x, base): This function converts x to an integer of the specified base, the default x value is 0. If the base is not specified, it defaults to 10.
+
+The syntax of int() function is:
+int(x=0, base=10)
+Consider the following program to understand the working of int() function.
+s = "0011"       # A binary string.
+print(int(s, 2)) # Result: 3
+print(int(s))    # Result: 11
+If "0011" is considered with base 2, then its integer value will be 3, whereas if "0011" is considered with base 10, then its integer value will be 11.
+
+2. float(x): This function is used to convert any data type to a floating point number. The float() function returns a floating point number from a number or a string.
+
+The syntax of float() function is:
+float(x)
+where x is a number or string that needs to be converted to a floating point number. If it's a string, the string should contain decimal points
+
+The below table gives information about the Usage of the float() functions and their respective outputs with the explanation.
+
+print(float(23.4))
+
+23.4
+
+The parameter is already a float number. So no conversion happens
+
+print(float(9))
+
+9.0   
+
+The integer 9 is converted to float 9.0 
+
+print(float("32"))
+
+32.0   
+
+The string "32" is converted to float 32.0     
+
+print(float("-42.48"))
+
+-42.48
+
+The string "-42.48" is converted into float -42.48
+
+print(float(" -24.45 "))
+
+-24.45
+
+Leading and trailing spaces are trimmed and converted to float value.
+
+print(float("InF"))
+
+inf   
+
+inf represents the upper bound value of float.
+
+print(float("InFiNiTy"))
+
+inf      
+
+The case of text does not matter. Words used : inf or infinity
+
+print(float("nan"))
+
+nan      
+
+nan represents not a number.
+
+print(float("NaN"))
+
+nan   
+
+The case of text does not matter.
+
+print(float("CodeTantra"))
+
+ValueError
+
+Cannot convert string "CodeTantra" to float.
+
+
+
+
+Write a simple program to convert given input values to floating point values.
+````python
+a = int(input("Enter a value: "))
+b = input("Enter b value: ")
+
+# Convert "a" to floating point value and print it
+print(float(a))
+# Convert "b" to floating point value and print it
+print(float(b))
+````
+8.2.2. Data Type Conversion - ord(), hex(), oct and complex()
+04:10
+3. ord( ): The ord() method returns an integer representing a Unicode code point for the given Unicode character.
+
+The syntax of ord() function is:
+ord(c)
+Examples:
+print(ord('A'))   # Result: 65
+print(ord('a'))   # Result: 97
+print(ord('AB'))  # Results TypeError
+If the length of the string is greater than 1, then ord() function results in a TypeError.
+
+4. hex(x): The hex() function converts an integer to its corresponding hexadecimal string.
+
+The syntax of hex() function is:
+hex(x)
+Examples:
+print(hex(45))  # Result: '0x2d'.
+print(hex(9.9))  # Results TypeError
+A non-integer results in a TypeError: 'float' object cannot be interpreted as an integer
+Note: The returned hexadecimal string starts with prefix "0x" indicating that it is in hexadecimal form.
+
+5. oct(x): The oct() method takes an integer and returns its octal representation.
+
+The syntax of oct() function is:
+oct(x)
+print(oct(45))  # Result: '0o55'
+print(ord(9.9))  # Results TypeError
+A non-integer results in a TypeError: 'float' object cannot be interpreted as an integer
+Note: The returned octal string starts with prefix "0o" indicating that it is in octal form.
+
+6. complex(real, imag): The complex() method returns a complex number when the real and imaginary parts are provided, or it converts a string to a complex number.
+
+The syntax of complex() function is:
+complex(real, imag)
+print(complex(10, 3)) # Result: (10 + 3j)
+print(complex("10+4j")) # Result: (10 + 3j)
+If the first parameter passed to this method is a string, it will be interpreted as a complex number.
+Note: The string passed to the complex() should be in the form real + imag
+
+Follow the comment lines in the given editor and complete the code.
+````python
+
+a = input("Enter character: ")
+b = int(input("Enter an integer: "))
+
+# Calculate and print the Unicode code point of 'a'
+print(ord(a))  
+# Calculate and print the hexadecimal representation of 'b'
+print(hex(b))
+# Calculate and print the octal representation of 'b'
+print(oct(b)) 
+# Calculate and print the complex number representation of 'b' and '0'
+print(complex(b, 0))
+
+
+````
+8.2.3. Data Type Conversion - str(),eval() and chr()
+03:09
+7. str(x): The str() function is used to convert x to a string representation.
+
+The syntax of str() function is:
+str(object='')
+str(object=b'', encoding='utf-8', errors='strict')
+If no object is given, it returns an empty string. The behaviour of str() depends on whether encoding or errors are specified.
+
+object - object whose informal representation is to be returned
+encoding - Defaults of UTF-8. Encoding of the given object
+errors - response when decoding fails.
+
+Example:
+      
+print(str(100)) # Result: 100
+
+8. eval(str): The eval() method parses the expression passed to this method and runs python expression (code) within the program.
+
+The syntax of eval() function is:
+eval(expression, globals=None, locals=None)
+
+expression: this string is parsed and evaluated as a Python expression.
+globals (optional): a dictionary to specify the available global methods and variables.
+locals (optional): another dictionary to specify the available local methods and variables.
+
+Example:
+a = 100
+b = 3
+print(eval("a + b")) # Result: 103
+
+9. chr(): The chr() method returns a character (a string) from an integer (that represents unicode code point of the character). This is the inverse of ord() function.
+
+The syntax of chr() function is :
+chr(i)
+i - integer value, The valid range of i is from 0 through 1,114,111(0x110000).
+
+Example:
+print(chr(97))      # Result: a
+print(chr(65))      # Result: A
+print(chr(1200))    # Result: Ұ
+If the value is outside the range of (0 , 1114111), it results in a ValueError: chr() arg not in range(0x110000).
+print(chr(-1))       # Results ValueError
+print(chr(1114112))  # Results ValueError
+
+Follow the comment lines in the given editor and complete the code.
+````python
+
+a = int(input("Enter an integer: "))
+
+# Calculate and print the character representation of 'a'
+print(chr(a))
+# Calculate and print the string representation of 'a'
+print(str(a))
+````
+8.2.4. Data Type Conversions
+36:14
+10. tuple( ) : This function is used to convert any data type to a tuple.
+str = "python"
+print(tuple(str)) # Result: ('p', 'y', 't', 'h', 'o', 'n')
+11.set( ) : This function is used to convert any data type to set.
+str = "python"
+print(set(str)) # Result: {'n', 't', 'p', 'h', 'y', 'o'}
+12. list( ) : This function is used to convert any data type to a list type.
+str = "python"
+print(list(str)) # Result: ['p', 'y', 't', 'h', 'o', 'n']
+13.dict(d) : This function is used to create a dictionary, but d must be tuple of order (key, value).
+mytuple = ((1, 'a'), (2, 'b')) 
+print(dict((y, x) for x, y in mytuple)) # {'a': 1, 'b': 2}
+Here we used for loop to iterate every element of tuple object and we use dict( ) function to convert tuple elements into key-value pairs.
+
+Note:zip() function in Python is used to map a similar index of multiple containers. We learn more details on zip( ) in the upcoming sections.
+
+
+Follow the comment lines in the given editor and complete the code.
+Hint: Since a set does not maintain the order of insertion, use sorted(set) to print the result in the sorted order.
+
+````python
+tup1 = tuple(input().split(","))
+tup2 = tuple(input().split(","))
+
+print(tup1)# print tup1
+
+print(tup2)# print tup2
+
+list1 = list(tup1)# convert tup1 to list data type
+list2 = list(tup2)# convert tup2 to list data type
+
+print(list1)
+print(list2)
+
+dict1 =  zip(list1,list2) 
+# create a dictionary with the elements of list1 as keys and list2 as values using dict().
+print(dict(zip(list1,list2)))
+set1 = set(list1)# convert dict1 to set data type
+
+print(sorted(set1))
+````
+______
+# Unit 1 - Lesson 9
+_____
+9.1.1. Reading input in Python - strings
+03:49
+In Python, to read input from the user, we have an in-built function called input().
+
+The syntax for input() function is :
+input([prompt])
+Here, the optional prompt string will be printed to the console for the user to input a value. The prompt string is used to indicate the type of value to be entered by the user.
+
+Reading string inputs
+
+Let us consider the below example:
+
+name = input("Enter your Name: ")
+print("User Name:", name)
+If the input is given as CodeTantra, the result will be
+
+User Name: CodeTantra
+If the input is given as Jacob, the result will be
+
+User Name: Jacob
+If you want to take only specified data type input from the user, you need to mention the data type before the input.
+
+ For example : a= int(input("Enter an integer :")
+
+So that, if the user gives an input other than the mentioned data type, it results in the valueError.
+
+Write a program to print your favourite place.
+````python
+place = input("favourite place: ") #take your favourite place using input statement
+
+print("My favourite place is:", place)# Print your favourite place
+
+````
+9.1.2. Understanding Output in Python.
+01:26
+We already discussed this function to print output on Screen.
+
+It is print() function, which is a built-in function in Python.
+
+We can pass zero or more number of expressions separated by commas(,) to print() function.
+
+The print() function converts those expressions into strings and writes the result to standard output which then displays the result on screen.
+
+Let us consider an example of print() with multiple values with comma(,) as separator.
+
+print("Hi", "Hello", "Python") # will print output as follows
+Hi Hello Python
+Let us discuss another example:
+
+a = 10
+b = 50
+print("A value is", a, "and", "B value is", b) # will print output as follows
+A value is 10 and B value is 50
+Here we have assigned values 10 and 50 to a and b respectively.
+
+The above print() statement consists of both strings and integer values.
+
+Write a program to print your favourite programming language.
+
+At the time of execution, the program should print the message on the console as:
+
+Enter Language: 
+For example, if the user gives the input as:
+
+Enter Language: Python
+then the program should print the result as:
+
+My Favourite Language is Python
+Identify the error and correct the given code.
+
+````python
+lang = input("Enter Language: ")
+print("My Favourite Language is",lang)
+````
+
+9.1.3. % - formatting and str.format() function
+06:36
+The print() function is used to print the values to the standard output.
+
+The general syntax of print() function is:
+print(value1, value2..., sep = ' ', end = '\n', file = sys.stdout, flush = False)
+
+where,
+
+value1,value2...,valuen These are the actual data values to be printed.
+
+sep: It is the separator used between each value. If there is no separator, then by default 'whitespace' is taken.
+
+end: It is the character which gets printed after all values have been printed. The newline character '\n' is the default. 
+
+file: This argument specifies where the output needs to be printed. The screen is the standard output by default
+
+
+Output Formatting in Python
+
+1. Python uses C-style string formatting to create new, formatted strings. The % operator also called as 'string modulo operator' is used to format a set of variables enclosed in a "tuple" (a fixed size list), together with a format string, which contains normal text together with "argument specifiers", special symbols like %s and %d.
+
+The general syntax for a format placeholder is:
+%[flags][width][.precision]type
+The following are some basic argument specifiers:
+%s - String (or any object with a string representation, like numbers)
+%d - Integers
+%f - Floating point numbers
+%.<number of digits>f  - Floating point numbers with a fixed amount of digits for the decimal part.
+%x or %X - Integers in hexadecimal representation (uppercase/lowercase)
+%o - Octal representation
+Example 1: If we consider a single variable called 'name' with a username in it, and if we would like to print a greeting to that user, then:
+name = "Ravi"
+print("Good morning, %s!" % name) # This statement prints "Good morning, Ravi!"
+Output:
+Good morning, Ravi!
+Example 2: If we consider more than one variable, we must use a tuple of those variables as shown below:
+a = 10
+b = 20
+str = "Hello"
+print("The value of a = %d, b = %d and str = %s" %(a, b, str))
+Output:
+The value of a = 10, b = 20 and str = Hello
+Example 3:
+print("Total number of votes: %4d, Women votes: %2d" %(480, 70))
+Output:
+Total number of votes: _480, Women votes: 70 # Observe 1 leading blank space left before the first value and no leading blank space before the second value 
+Let us understand the placeholders in the above example:
+The first placeholder %4d is used for the first component of our tuple, i.e. 480. This number will be printed with 4 characters. As 480 consists only of three digits, the output is padded with 1 leading blank.
+The second placeholder %2d is used for the second component of our tuple, i.e. 70. This number will be printed with 2 characters. As 70 consists two digits, the output does not have any leading blanks as both the blanks are occupied by the digits.
+
+2. The output can also be presented in a more elegant way using the str.format()
+
+This style of string formatting eliminates the usage of % operator (string modulo operator).
+
+The general syntax of str.format() function is:
+{}{}.format(value1, value2,...,valuen)
+
+where,
+
+{}{} are place holders created by the user in the string.
+
+value1,value2,...,valuen They could be variables, integers, floating-point numbers, strings, characters etc. 
+
+
+Note:The number of values passed as arguments in .format(arg1,arg2..) method should always be equal to the number of placeholders {} created by the user in the string.
+The following are some basic argument specifiers used with str.format():
+{} - String (or any object with a string representation, like numbers)
+{0:<number of digits>d} - Integers
+{0:.<number of digits>f} - Floating point numbers with a fixed amount of digits for the decimal part.
+{0:X} or {0:x} - Integers in hex representation (uppercase/lowercase)
+{0:o} - Octal representation
+
+Click on  button to know about string formatting using format method in Python
+
+Example 1:
+a = 10
+b = 20
+str = "Hello"
+print("The value of a = {}, b = {} and str = {}".format(a, b, str))
+Output:
+The value of a = 10, b = 20 and str = Hello
+Here the curly braces {} are used as placeholders in the format string. We can also use the tuple indices within each of the curly braces which correspond to its respective value in the argument list of format() as shown below.
+
+Example 2:
+a = 10
+b = 20
+str = "Hello"
+print("The value of a = {0}, b = {1} and str = {2}".format(a, b, str))
+Output:
+The value of a = 10, b = 20 and str = Hello
+Here, the index 0 corresponds to the variable represented by a. Likewise the indices 1 and 2 for b and str.
+
+Follow the instructions given in comment lines and write the program to understand format method.
+````python
+
+a=int(input("a: "))# Take an integer input from the user and store it in variable "a"
+
+b=int(input("b: "))# Take an integer input from the user and store it in variable "b"
+
+# print "a" value at 0 index and "b" value at 1 index
+
+
+"""print("a = {0} b = {1}".format(a, b))
+print("a = {} b = {}".format(b, a))"""
+
+# print by changing the index postions of "a" and "b" and observe the output
+
+
+
+print(f"a = {a} b = {b}")
+print(f"a = {b} b = {a}")
+
+````
+
+9.1.4. % - formatting and str.format() function
+19:02
+Follow the instructions given and write a program to print the user-given number in different formats using the format specifier.
+
+
+
+If we want to limit the decimal places of a certain value, we use the format {.nf} where n is the count of the decimal places.
+
+
+
+Example: If the variable is assigned with number 6 and the format is taken as "{0:.4f}".format(variable) then it results in 6.0000.
+
+
+
+Also, If we want to print a number X after n spaces, we use the format {:(number of digits of X + n)d}.
+
+
+
+Let's say, we want to print the number 12 after 4 spaces, we use the format {:(2 + 4)d} which can be justified as the number of digits of 12 is 2 and we require 4 spaces.
+
+
+
+More Examples:
+
+print("{0:10d}".format(5)) will print 5 after 9 spaces/blanks.
+print("{0:3d}".format(123)) will print 123 after 0 spaces/blanks.
+
+
+Use the format specifiers concept and write the program in the given editor by following the comment lines. Observe the output.
+
+
+
+Sample Input and Output:
+
+a: 3
+3.00
+3.000000
+b: 15
+15
+15
+ 15
+octal: 17
+hex: F
+
+
+````python
+"""
+# take float number from the user
+a = float(input("a: "))
+# print up to 2 decimal points
+print("{:.2f}".format(a))
+# print up to 6 decimal points
+print("{:.6f}".format(a))
+# take int number from the user
+b = int(input("Enter b value: "))
+# print the number with one space
+print("{:1d}".format(b))
+# print the number with two spaces
+print("{:2d}".format(b))
+# print the number with three spaces
+print("{:3d}".format(b))
+# print the given number b in octal form
+print(f"octal: {b:o}")
+# print the given input b in hexadecimal form
+print(f"hex: {b:X}")
+
+
+"""
+# take float number from the user
+a = float(input("a: "))
+# print up to 2 decimal points
+print(f"{a:.2f}")
+# print up to 6 decimal points
+print(f"{a:.6f}")
+# take int number from the user
+b = int(input("Enter b value: "))
+# print the number with one space
+print(f"{b:1}")
+# print the number with two spaces
+print(f"{b:2}")
+# print the number with three spaces
+print(f"{b:3}")
+# print the given number b in octal form
+print(f"octal: {b:o}")
+# print the given input b in hexadecimal form
+print(f"hex: {b:X}")
+
+
+````
+______
+# Unit 1 - Lesson 10
+____
+10.1.1. Arithmetic Operators - An overview
+00:57
+Python supports the following 7 arithmetic operators.
+
+Operator		Operation												Expression and its result
+
++				Adds values on either side of the operator.				10 + 20 = 30
+
+-				Subtracts right hand operand from left hand operand.	20 - 10 = 10
+
+*				Multiplies values on either side of the operator		11 * 11 = 121
+
+/				Divides left hand operand by right hand operand			23 / 2 = 11.5
+
+**				Performs exponential (power) calculation on operators	2 ** 3 = 8
+
+%				Divides left hand operand by right hand operand 
+				and returns remainder									12 % 5 = 2
+
+//				Floor Division - The division of operands where the 
+				result is the quotient in which the digits after the 	23 // 2 = 11 (Integer division)
+				decimal point are removed. But if one of the operands	9.0 // 2.0 = 4.0 
+				is negative, the result is floored, i.e., rounded away 	-11 // 3 = -4
+				from zero (towards negative infinity).					-11.0 // 3 = -4.0	
+
+10.1.2. Using Arithmetic Operators
+01:27
+Write a program to read two int inputs from the user and display the results of the following arithmetic operations:
+
+Sample Input and Output:
+num1: 12
+num2: 4
+12 + 4 = 16
+12 - 4 = 8
+12 * 4 = 48
+12 / 4 = 3.0
+12 ** 4 = 20736
+12 % 4 = 0
+12 // 4 = 3
+
+````python
+#Arithmetic Operators are +, -, *, /, **, %, //
+num1 = int(input("num1: "))
+num2 = int(input("num2: "))
+
+# print num1+num2
+print('%d + %d =' %(num1, num2), num1+num2   )
+# print num1-num2
+print('%d - %d =' %(num1, num2), num1-num2   )
+# print num1*num2
+print('%d * %d =' %(num1, num2), num1*num2   )
+# print num1/num2
+print('%d / %d =' %(num1, num2), num1/num2   )
+# print num1**num2
+print('%d ** %d =' %(num1, num2), num1**num2   )
+# print num1%num2
+print('%d %% %d =' %(num1, num2), num1%num2   )
+# print num1//num2
+print('%d // %d =' %(num1, num2), num1//num2   )
+````
+10.1.3. Writing a program on arithmetic operators
+02:20
+Write a program to read two int inputs from the user and perform the following arithmetic operations addition, subtraction, multiplication, and division and print the result.
+
+Sample Input and Output:
+Addition of 40 and 10 = 50
+Subtraction of 40 and 10 = 30
+Multiplication of 40 and 10 = 400
+Division of 40 and 10 =  4.0
+
+````python
+num1 = int(input ("num1: "))
+num2 = int(input ("num2: "))
+
+
+# Print the addition of num1 and num2
+print('Addition of %d and %d =' %(num1, num2), num1+num2)
+# Print the subtraction of num1 and num2
+print('Subtraction of %d and %d =' %(num1, num2), num1-num2)
+# Print the multiplication of num1 and num2
+print('Multiplication of %d and %d =' %(num1, num2), num1*num2)
+# Print the division of num1 and num2
+print('Division of %d and %d =' %(num1, num2), num1/num2)
+
+````
+10.1.4. Some more arithmetic operators
+02:07
+Write the program to read two integer inputs from the user and perform the following arithmetic operations over it.
+ Calculate Exponent of num1 and num2
+ Calculate Modulus Division
+ Calculate Floor Division
+During execution, the program should print the message on the console as mentioned in the sample test case
+
+Sample Input and Output:
+num1: 10
+num2: 5
+Exponent of 10 with 5 = 100000
+Modulus of 10 and 5 = 0
+Floor Division of 10 and 5 = 2
+
+````
+num1 = int(input("num1: "))
+num2 = int(input("num2: "))
+
+# Print the exponenet of num1 to the power of num2
+print('Exponent of %d with %d =' %(num1, num2), num1**num2)
+# Print the modulous function of num1 and num2
+print('Modulus of %d and %d =' %(num1, num2), num1%num2)
+# Print the floor division function of num1 and num2
+print('Floor Division of %d and %d =' %(num1, num2), num1//num2)
+````
+
+10.1.5. Writing a program on some more arithmetic operators
+11:32
+Write a program that uses the following arithmetic operators.
+
+
+
+** Exponent Operator
+
+
+
+% Modulus Division
+
+
+
+// Floor Division
+
+
+
+The program should take two integer inputs from the user and print the result of the above-mentioned arithmetic operators.
+
+
+
+Sample Input:
+
+num1: 20
+
+num2: 10
+
+Sample Output:
+
+Exponent of 20 with 10 = 10240000000000
+
+Modulus of 20 and 10 = 0
+
+Floor Division of 20 and 10 = 2
+
+````
+num1 = int(input("num1: "))
+num2 = int(input("num2: "))
+print("Exponent of %d with %d =" %(num1, num2),num1**num2)
+print(f"Modulus of {num1} and {num2} = {num1%num2}" )
+print("Floor Division of %d and %d =" %(num1, num2),num1//num2)
+````
+
+10.1.6. Explanation of divmod function
+25:53
+Write a program to find quotient and remainder of the given two values using divmod().
+
+Sample Input and Output:
+num1: 45
+num2: 3
+45 // 3 = 15
+45 % 3 = 0
+
+````python
+
+#Program to illustrate divmod() function
+# Input num1 with message "Enter number-1: "
+num1 = int(input("num1: "))
+
+# Input num2 with message "Enter number-2: "
+num2 = int(input("num2: "))
+
+
+# use divmod() and store results in 2 variables x, and y
+x, y = divmod(num1, num2)
+
+# replace variables in () and print the results
+print(f"{num1} // {num2} = {x}")
+print(f"{num1} % {num2} = {y}")
+````
+
+### Comparison Operators
+10.2.1. Comparison Operators - An overview
+05:17
+Python supports the following comparison operators.The result of these comparison operators is either True or False.
+
+Operator	Operation												Expression (Result)				
+
+==			If the values of two operands are equal, 				23 == 34 (False)
+			then the condition becomes True.						10 == 10 (True)
+
+!=			If the values of two operands are not equal, 			23 != 34 (True)
+			then the condition becomes True.						10 != 10 (False)
+
+<			If value of left operand is less than value				10 < 20 (True) 
+			of right operand, then condition becomes true.			20 < 5 (False)				
+
+>			If value of left operand is greater than value			10 > 20 (False) 
+			of right operand, then condition becomes true.			20 > 5 (True)				
+
+<=			If value of left operand is less than or equal to 		10 <= 20 (True) 
+			value of right operand, then condition becomes true.	20 <= 20 (True)				
+
+>=			If value of left operand is greater than or equal to	10 >= 20 (False) 
+			value of right operand, then condition becomes true.		    20 >= 20 (True)				
+ 
+The symbols are read as follows :
+
+> - Greater than
+
+< - Less than
+
+== - Is equal To
+
+!= - Not equal To
+
+>= - Greater than or equal to
+
+<= - Less than or equal to
+
+Write a program to understand the comparison operators in Python and perform the following operations >, <, ==, !=, <=, >= and print the result. Take two int inputs from the user.
+
+Sample Input and Output :
+Is 40 greater than 10 = True
+Is 40 less than 10 = False
+Is 40 equal to 10 = False
+Is 40 not equal to 10 = True
+Is 40 less than or equal to 10 = False
+Is 40 greater than or equal to 10 = True
+
+
+num1 = int(input("num1: "))
+num2 = int(input("num2: "))
+
+# Print Is num1 greater than num2.
+print('Is %d greater than %d =' %(num1, num2), num1> num2    )
+# Print Is num1 less than num2.
+print('Is %d less than %d =' %(num1, num2),   num1<num2    )
+# Print Is num1 equal to num2.
+print('Is %d equal to %d =' %(num1, num2),  num1==num2    )
+# Print Is num1 not equal to num2.
+print('Is %d not equal to %d =' %(num1, num2), num1!=num2      )
+# Print Is num1 less than or equal to num2.
+print('Is %d less than or equal to %d =' %(num1, num2),  num1<=num2    )
+# Print Is num1 greater than or equal to num2.
+print('Is %d greater than or equal to %d =' %(num1, num2),  num1>=num2     )
+
+
+10.2.2. Using Comparison operators
+01:50
+Take two integers as input from the console using input() function. For each comparison operator ( >, <, ==, !=, >=, <= ), print to the console, the result of the two input numbers as shown in the example.
+
+Sample Input and Output:
+num1: 20
+num2: 10
+Is 20 greater than 10 = True
+Is 20 less than 10 = False
+Is 20 equal to 10 = False
+Is 20 not equal to 10 = True
+Is 20 greater than or equal to 10 = True
+Is 20 less than or equal to 10 = False
+
+# Comparision Operators >, <, ==, !=, >=, <= on numbers
+num1 = int(input("num1: "))
+num2 = int(input("num2: "))
+
+# Print Is num1 greater than num2.
+print('Is %d greater than %d =' %(num1, num2), num1> num2    )
+# Print Is num1 less than num2.
+print('Is %d less than %d =' %(num1, num2),   num1<num2    )
+# Print Is num1 equal to num2.
+print('Is %d equal to %d =' %(num1, num2),  num1==num2    )
+# Print Is num1 not equal to num2.
+print('Is %d not equal to %d =' %(num1, num2), num1!=num2      )
+
+# Print Is num1 greater than or equal to num2.
+print('Is %d greater than or equal to %d =' %(num1, num2),  num1>=num2     )
+# Print Is num1 less than or equal to num2.
+print('Is %d less than or equal to %d =' %(num1, num2),  num1<=num2    )
+
+
+10.2.3. Comparison operators with strings
+03:52
+All the comparison operators work on strings also. The result is either True or False.
+
+Python compares strings using Unicode value of the characters (lexicographical).
+
+The comparison is made taking the ordinal values of each character in the string and compare it with the ordinal values of the character at the same position in the other string.
+
+If the ordinal value of the character in the first string is greater than the ordinal value of the character in the second string, then the comparison stops and the first string is declared as greater than the second string. The length of the string does not matter.
+
+In Python, the ordinal value of a character can be found using the ord() function, which takes the character as an argument.
+
+Note: You do not have to use ord() function. Python uses it to compare the strings internally.
+
+Write a program to understand the use of comparison operators using conditional parameters. Take input from user using input() method.
+
+Sample Input and Output
+str1: Oliver
+str2: Ethan
+Oliver > Ethan = True
+Oliver < Ethan = False
+Oliver == Ethan = False
+Oliver != Ethan = True
+Oliver >= Ethan = True
+Oliver <= Ethan = False
+
+
+# write your code here
+num1 = input("str1: ")
+num2 = input("str2: ")
+
+# Print Is num1 greater than num2.
+print('%s > %s =' %(num1, num2), num1 > num2 )
+print('%s < %s =' %(num1, num2), num1 < num2 )
+print('%s == %s =' %(num1, num2), num1 == num2 )
+print('%s != %s =' %(num1, num2), num1 != num2 )
+print('%s >= %s =' %(num1, num2), num1 >= num2 )
+print('%s <= %s =' %(num1, num2), num1 <= num2 )
+
+
+10.2.4. Writing Comparison Operators on Strings
+01:33
+Take two strings as input from the console using input() function. For each of the comparison operators ( >, <, ==, !=, >=, <=), print to the console, the result of the comparison of the two input strings as shown in the example below.
+
+Sample Input Output
+str1: Code
+str2: Tantra
+Is Code greater than Tantra = False
+Is Code less than Tantra = True
+Is Code equal to Tantra = False
+Is Code not equal to Tantra = True
+Is Code greater than or equal to Tantra = False
+Is Code less than or equal to Tantra = True
+
+str1 = input("str1: ")
+str2 = input("str2: ")
+
+# Print Is str1 greater than str2
+print('Is %s greater than %s =' %(str1, str2),      str1> str2 )
+# Print Is str1 less than str2
+print('Is %s less than %s =' %(str1, str2),  str1< str2    )
+# Print Is str1 is equal to str2
+print('Is %s equal to %s =' %(str1, str2),  str1== str2     )
+# Print Is str1 not equal to str2
+print('Is %s not equal to %s =' %(str1, str2),      str1!= str2 )
+# Print Is str1 greater than or equal to str2
+print('Is %s greater than or equal to %s =' %(str1, str2),  str1>= str2      )
+# Print Is str1 less than or equal to str2
+print('Is %s less than or equal to %s =' %(str1, str2),  str1<= str2      )
+
+___
+# Unit 1 - Lesson 11
+___
+Assignment Operators
+11.1.1. Assignment Operators - overview
+03:58
+Assignment Operators are used to assign values to variables.
+
+a = 52 is a simple assignment operator that assigns the value 52 on the right-hand side to the variable a on the left-hand side.
+
+Note: An assignment operator assigns the value located on the right-hand side of the operator to the variable located on the left-hand side. The right side of the operator can be an operand or an expression that results in a value. The left hand side should be a variable.
+
+Python programming language supports the following assignment operators :
+
+Operator
+
+Description
+
+Expression
+
+=
+
+Assigns values from right-side operands to left-side operands.
+
+c = a + b assigns value of a + b into c to left side operand
+
++=
+
+Adds the right operand to the left operand and assigns the result to the left operand.
+
+c += a, equivalent to c = c + a
+
+-=
+
+Subtracts the right operand from the left operand and assigns the result to the left operand.
+
+c -= a, equivalent to c = c - a
+
+*=
+
+Multiplies the right operand with the left and assigns the result to the left operand.
+
+c *= a, equivalent to c = c * a
+
+/=
+
+Divides the left operand with the right and assigns the result to the left operand.
+
+c /= a, equivalent to c = c / a
+
+**=
+
+Performs exponential calculation on the left and right operands and assigns the result to the left operand.
+
+c **= a, equivalent to c = c ** a
+
+%=
+
+Performs modulo division of left and right operands and assigns the result to the left operand.
+
+c %= a, equivalent to c = c % a
+
+//=
+
+Performs floor division on left and right operands and assign the result to left operand
+
+c //= a, equivalent to c = c // a
+
+
+
+Take two integers as input from the console using input() function. For each assignment operator (+=, -+, *=, /=, **=, //=, %=, =), print to the console, the result of the two input numbers as shown in the example.
+
+Sample Input and Output:
+x: 40
+y: 30
+x +=y: x = 70 and y = 30
+x -= y: x = 10 and y = 30
+x *= y: x = 1200 and y = 30
+x /= y: x = 1.3333333333333333 and y = 30
+x **= y: x = 1152921504606846976000000000000000000000000000000 and y = 30
+x //= y: x = 1 and y = 30
+x %= y: x = 10 and y = 30
+x = y: x = 30 and y = 30
+Note: Before every assignment operation, set the values of x and y to the initially read values.
+
+a = int(input("x: "))
+b = int(input("y: "))
+x = a
+y = b
+# calculate the value of x += y, assign it to x and print the x, y values
+x+=y
+print('x += y: x =', x   , 'and y =',  y   )
+x = a
+y = b
+# calculate the value of x -= y, assign it to x and print x, y values
+
+x -= y
+print('x -= y: x =', x   , 'and y =',   y   )
+x = a
+y = b
+# calculate the value of x *= y, assign it to x and print x, y values
+
+x *= y
+print('x *= y: x =', x    , 'and y =',   y  )
+x = a
+y = b
+# calculate the value of x /= y, assign it to x and print x, y values
+x /= y
+
+print('x /= y: x =', x    , 'and y =', y    )
+x = a
+y = b
+# calculate the value of x **= y, assign it to x and print x, y values
+
+x **= y
+print('x **= y: x =', x   , 'and y =',  y   )
+x = a
+y = b
+# calculate the value of x //= y, assign it to x and print x, y values
+
+x //= y
+print('x //= y: x =', x   , 'and y =',  y   )
+x = a
+y = b
+# calculate the value of x %= y, assign it to x and print x, y values
+
+x %= y
+print('x %= y: x =', x   , 'and y =',  y   )
+x = a
+y = b
+# assign the value of x = y, assign it to x and print x, y values
+
+x = y
+print('x = y: x =',   x  , 'and y =', y    )
+
+
+11.1.2. Write a program on assignment operators =,+=,-= and *=
+06:06
+Take two integers x and y as inputs from the console using input() function. For each assignment operator ( = , +=, -=, and *= ), print to the console, the result of applying these operators on the two input integers as shown in the example.
+
+Assumption:
+ y is a non-zero integer
+Sample Input and Output:
+x: 20
+y: 30
+x = y: 30
+x += y: 50
+x -= y: -10
+x *= y: 600
+Hint: Before every assignment operation, reset the values of x and y to the initial values.
+
+# Assignment Operators =, +=, -=, *=
+x=int(input("x: "))
+y=int(input("y: "))
+a=x
+b=y
+x = y
+print("x = y:",x)
+x=a
+y=b
+x += y
+print("x += y:",x)
+x=a
+y=b
+x -= y
+print("x -= y:",x)
+x=a
+y=b
+x *= y
+print("x *= y:",x)
+
+11.1.3. Write a program on operators /=,%=,**=
+01:24
+Take two integers x and y as inputs from the console using input() function. For each assignment operator ( /= , %=, **=, and //= ), print to the console, the result of applying these operators on the two input integers as shown in the example.
+
+Assumption:
+ y is a non-zero integer
+Sample Input and Output:
+x: 20
+y: 10
+x /= y: 2.0
+x %= y: 0
+x **= y: 10240000000000
+x //= y: 2
+Hint: Before every assignment operation, reset the values of x and y to the initial values.
+
+# Assignment Operators  /= , %=, **=, //=
+a = int(input("x: "))
+b = int(input("y: "))
+# assign the value of a to x and b to y and perform the mentioned operations on x, y
+x=a
+y=b
+x /= y
+print("x /= y:" , x  )
+x=a
+y=b
+x %= y
+print("x %= y:" ,  x )
+x=a
+y=b
+x **= y
+print("x **= y:" , x  )
+x=a
+y=b
+x //= y
+print("x //= y:" ,  x )
+
+Bitwise Operators
+
+11.2.1. Bitwise operators - an overview
+00:36
+Numbers can be used in many forms like decimal, hexadecimal, octal and binary. Computers store the numbers in binary format.
+
+
+
+Numbers in binary format :
+
+2 is "10"
+
+3 is "11"
+
+4 is "100"
+
+678 is "1010100110"
+
+
+
+Python Bitwise Operators take one or two operands, and operate on them bit by bit, instead of whole. Following are the bitwise operators in Python
+
+
+
+1. << (Left shift):
+
+Shifts the left-side operand bits towards the left side for the given number of times in the right operand.
+This operation effectively multiplies the left-hand operand by 2 raised to the power of the number of positions shifted.
+Example:
+
+x = 12 = 0000 1100 ---> (Binary representation)
+x << 2 = 0011 0000 ---> 48 
+x = 12 and x << 2 will return 48 i.e. (12 * (2 ** 2))
+
+
+2. >> (Right shift):
+
+Shifts the left-side operand bits are moved towards the right side for the given number of times.
+This operation is equivalent to dividing the left-hand operand by 2 raised to the power of the number of positions shifted.
+Example:
+
+x = 48 = 0011 0000 ---> (Binary representation)
+x >> 3 = 0000 0110 ---> 6
+x = 48 and x >> 3 will return 6 i.e. (48 / (2 ** 3))
+
+
+3. & (AND):
+
+Results bit 1, if both operand bits are 1; otherwise, results bit 0.
+Example:
+
+If the bit in x and the corresponding bit in y are 1, then the bit in the result will be 1. Otherwise, it will be zero
+
+x = 10 = 1010
+y = 4  = 0100
+x & y  = 1010
+    	&
+         0100
+      = 0000
+      = 0 (Decimal)
+
+
+4.| (OR):
+
+Results bit 1 if any of the operand bits is 1; otherwise, results bit 0.
+Example:
+
+If the bit in both operands is zero, then the resulting bit is zero. otherwise, it is 1.
+
+x = 10 = 1010
+y = 4 = 0100
+x | y = 1010
+        |
+       0100
+     = 1110
+     = 14 (Decimal)
+
+
+5.~(NOT):
+
+It is a unary operation that performs logical negation on each bit, forming the one's complement of the given binary value. Bits that are 0 become 1, and those that are 1 become 0.
+Example:
+
+x = 5
+ x = 00000101
+~ x = 11111010
+~ x = -00000110 (in signed form)
+Therefore ~x = -6 (in signed form)
+
+
+6.^(XOR):
+
+Results bit 1, if any of the operand bits is 1 but not both, otherwise results bit 0.
+Example:
+
+x = 10 = 1010
+y = 4 = 0100 
+x ^ y = 1010
+        ^
+        0100
+      = 1110
+      = 14 (Decimal)
+      
+11.2.2. Using Bitwise operators
+07:00
+Take two integers x and y as inputs form the console using input() function. For each bitwise operator ( >> and << ), print to the console, the result of applying these operators on the two input integers as shown in the example.
+
+Assumption:
+ Make sure the value of y is < 100 as this will be taken as power of 2
+Sample Input and Output:
+x: 12
+y: 3
+12 >> 3 is 1
+12 << 3 is 96
+
+#Program to illustrate bit wise operators >>, <<
+x = int(input("x: "))
+y = int(input("y: "))
+a=x>>y
+print(f"{x} >> {y} is {a}")
+b=x<<y
+print(x,"<<",y,"is",b)
+
+11.2.3. Write a program using 'and' & 'or' Bitwise operators
+03:26
+Take two integers x and y as inputs from the console using input() function. For each bitwise operator ( & , | ), print to the console, the result of applying these operators on the two input integers as shown in the example.
+
+Click on the  button to know and operator.
+
+Click on the  button to know or operator.
+
+Sample Input and Output:
+x: 6
+y: 3
+6 & 3: 2
+6 | 3: 7
+
+#Program to illustrate the bitwise operators &, |
+x = int(input("x: "))
+y = int(input("y: "))
+a=x&y
+print(f"{x} & {y}: {a}")
+b=x|y
+print("%d | %d: %d"%(x,y,b))
+
+

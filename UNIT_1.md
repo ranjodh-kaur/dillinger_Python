@@ -714,3 +714,229 @@ print("Value of a:", a) # Print a
 print("Value of b:",  b ) # Print b
 print("Value of c:",  c ) # Print c
 ````
+
+_________
+# Unit 1 - Lesson 5
+_______
+#### 5.1.1. Understanding Expressions
+
+An expression is a combination of values(Constants), variables and operators.
+
+An expression may also include call to functions and objects. We will learn about functions and objects in the later sections.
+
+Operators are symbols that represent particular actions. Operands participate in the action performed by the operator.
+
+Some of the arithmetic operators present in Python are :
+Operator 	Meaning 					Expression 		Value
++			Arithmetic addition			10+20			30	(addition of 10 and 20)
+-			Arithmetic subtraction		40-20			20	(subtraction of 20 from 40)
+*			Arithmetic Multiplication	5*4				20	(multiplication of 5 and 4)
+/			Arithmetic Division			8/4				2	(quotient when 8 is divided by 4)
+%			Modulus (Remainder)			5%3				2	(remainder when 5 is divided by 3) 
+More operators will be discussed in the later sections.
+Any expression evaluates to a single value, which becomes the value of the expression.
+
+Instructions that a Python interpreter can execute are called statements. For example, a = 1 is an assignment statement.
+
+In the example given below a + b is an expression and the print() function prints the resultant value which is 20.
+
+Example1
+a = 10 # This is an assignment statement
+b = 10 # This is an assignment statement
+print(a + b) # a + b is an expression and print(a + b) is a statement
+
+Example2:
+b = 10 # This is an assignment statement
+c = 10 # This is an assignment statement
+a = b * 5 + c # b * 5 + c is an expression, we are assigning this expression to the variable a then a = b * 5 + c is an assignment statement 
+print(a)
+
+Note : In the above example we have used simple arithmetic operators like + and * which performs arithmetic addition and multiplication respectively. The operator + works as a concatenation operator if the operands are strings(text).
+Understand and fill the missing code given, to know about expressions and statements.
+
+````python
+number1 = 20.50
+number2 = 38.25
+# Print the multiplication of number1 and number2 using * operator.
+print(number1*number2)
+string1 = "Amazon"
+string2 = "River"
+# Print the concatenated value of string1 and string2 using + operator.
+print(string1+string2)
+````
+
+#### 5.1.2. Understanding Statements - Print statements
+02:27
+A statement in Python is a logical instruction which can be read and executed by Python interpreter.
+
+In Python, we have different kinds of statements :
+Print statements
+Assignment statements
+Selective statements
+Iterative statements
+Control Flow statements
+Function declaration statements
+The purpose of Python's assignment statement is to associate variables with values in your program.
+
+It is the only statement that does not start with a keyword.
+
+An assignment statement contains atleast one equal sign (=), to the left hand side of = we have a variable and to the right hand side we have an expression.
+
+The general form of an assignment statement is as follows :
+target0 = target1 = ... = expression
+
+Here target0, target1, target2 ... are variables and Python will evaluate the expression to a single value and that single value is assigned to the variables. 
+This association of a value to a variable is called as binding. 
+For example, Let us consider the following code:
+a = 15
+print(a)
+Here, a = 15 is a simple assignment statement and print(a) is a print statement used to display the value of a.
+
+5.1.3. Types of Assignment Statements
+01:26
+There are two types of assignment statements in Python. They are:
+
+1. Basic assignment statements
+2. Augmented assignment statements
+
+The simple syntax for a basic assignment statement is:
+variable_name = expression
+
+In the example given below we are assigning a string value "CodeTantra" to a variable called name.
+name  =  "CodeTantra"
+
+Fill the missing code in the given editor follow the instructions given below.
+Create a variable message and assign "Welcome to Python" to it.
+Print the variable message.
+Create a variable number which is taking input from the user
+Add 5 to the variable number by using number = number + 5.
+Print the variable number.
+
+````python
+message = "Welcome to Python" 
+print(message) # print message
+number = int(input())
+number=number+5 # add 5 to the number
+print(number) # print number
+````
+
+5.1.4. Augmented Assignment Statement
+01:17
+Augmented assignment is a combination of an arithmetic or a binary operation and an assignment operation in a single statement.
+
+We can combine arithmetic operators in assignments to form an augmented assignment statement.
+
+The combined operations of the augmented assignments are represented using the following operators : +=, -=, *=, /=, %=
+
+Let us consider a simple example:
+a += b
+The above statement is a shorthand for the below simple statement.
+
+a = a + b
+In augmented assignment statements, the left-hand side is evaluated before the right-hand side
+
+Let us discuss with a simple example:
+a += b
+Here the left-hand side i.e. a is evaluated first, then value of b is evaluated and then addition is performed, and finally the addition result is written back to a.
+
+An augmented assignment expression like
+x += 1
+can be rewritten as
+x = x + 1
+Both the above statements give out similar result, but the effect is slightly different.
+
+In the augmented version, the value of x is evaluated only once. Furthermore, whenever feasible, the actual operation takes place in the existing memory location of x, without creating a new memory space and then assigning it to the target variable.
+
+
+5.2.1. What is an Indentation
+01:28
+Python utilizes white spaces to define control flow blocks. This concept is inherited from its predecessor, ABC. Instead of relying on punctuation or keywords, Python uses indentation to signify the scope of a block of code.
+
+The first line of the function definition is called the header, the rest is called the body.
+
+The header has to end with a colon (:) and the body has to be indented.
+
+By convention, the indentation is always four spaces or one Tab space.
+
+The body can contain any number of statements.
+
+Interpreter returns Indentation Error when we are not providing correct Indentation.
+
+Let us see the Indentation with Example:
+
+Indentation in Python:
+
+if(i == 10):  # Indentation started with :
+	print("i is 10") # this print statement is in if block(providing tab space at front of print statement)
+else: # else is in out of if block
+	print("i is not 10") #print statement is in else block
+Follow the instructions given in comment lines in the program and complete the code to understand the Indentation in python.
+
+Expected Output:
+Small Value: 10.0
+
+````python
+# add the proper indentation to the print statements
+if 100.0 > 10.0:
+	print("Small Value:", 10.0)
+else:
+	print("Large Value:", 100.0)
+````
+
+5.2.2. A simple program in Python
+01:04
+We can run a Python program in two ways. They are:
+
+Interactive mode
+Scripting mode
+1. Interactive mode
+
+Interactive mode in Python offers a command-line environment that provides instant feedback for every statement. It also retains the memory of previously entered statements, allowing them to remain active.
+With each new line of code entered, the interpreter evaluates both the partial code and the entire fed program.
+Interactive mode is particularly useful for swiftly and conveniently executing individual lines or chunks of code. It's a handy platform for experimentation, trying out different syntax variations, and quickly testing ideas.
+Furthermore, debugging becomes straightforward within the interactive mode environment.
+
+To start interactive mode on Ubuntu/Linux/macOS, open the terminal and type the following :
+python
+To start interactive mode on Windows, open the command prompt and type the following :
+c:\python33>python
+To start interactive mode of a particular version of python in windows, open the command prompt and type the following :
+c:\python33>py -N   N can be 1 or 2 or 3.
+Invoking the python interpreter in the interactive mode brings up the prompt like as follows:
+
+some information about the python version 
+>>>
+The >>> is Python's way of telling you that you are in interactive mode and is ready to execute Python statements.
+>>> print("Python is fun")
+Python is fun
+2. Scripting mode
+
+To execute a Python program in the scripting mode, the following steps are to be followed:
+Write group of Python statements in any one of the editor like: Notepad, Notepad++, editplus, nano, gedit, IDLE.
+Create and save the file with extension of “.py” or “.pyw”
+If script.py is the file that contains the Python statements, then to start scripting mode in Ubuntu/Linux/macOS, open the terminal and type the following :
+
+$python script.py  
+If script.py is the file that contains the Python statements, then to start scripting mode in windows, open the command prompt and type the following :
+
+c:\python33>python script.py 
+or 
+c:\python33>py script.py 
+Invoking the interpreter with a script parameter begins execution of the script and continues until the script is finished. When the script is finished, the interpreter is no longer active.
+
+Click on the  button to know different modes of execution in Python.
+
+Change the text in the code given to make the program print "Hello Python" instead of "Hello Basic".
+
+Expected Output:
+Hello Python
+
+````python
+print("Hello Python")
+````
+
+______
+# Unit 1 - Lesson 6
+_______
+
+

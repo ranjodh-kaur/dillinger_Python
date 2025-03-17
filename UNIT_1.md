@@ -2910,4 +2910,419 @@ print(f"{x} & {y}: {a}")
 b=x|y
 print("%d | %d: %d"%(x,y,b))
 
+11.2.4. Understanding Bitwise Complement Operator
+00:17
+The format for usage of one's complement ( ~ ) operator is:
+
+~operand
+Here, operand should be a primitive integral type.
+
+This operator works on the binary representation of the given number.
+
+It flips all the 1's to 0's and 0's to 1's.
+
+Click on the  button to know not operator.
+
+For example, if the ~ operator is applied on binary number 110, the result will be 001.
+
+
+11.2.5. Writing Bitwise operators ~ and ^
+07:25
+Take two integers x and y as inputs from the console using input() function. For each bitwise operator ( ~ , ^ ), print to the console, the result of applying these operators on the two input integers as shown in the example.
+
+Assumption:
+Perform ~ on input x
+Sample Input and Output:
+x: 25
+y: 6
+~ 25: -26
+25 ^ 6: 31
+
+Are you surprised with the result of ~(not) operator? (~25 = -26 or in general ~(x) = -(x + 1) if x is positive and ~(x) = -(x) - 1, if x is negative.
+
+This is because -ve numbers are represented in the computer in 2's complement form. 
+
+#Program to illustrate bitwise operators ~, ^
+x = int(input("x: "))
+y = int(input("y: "))
+
+print(f"~ {x}: {~x}")
+b=x|y
+print("%d ^ %d: %d"%(x,y,x^y))
+
+11.2.6. Bitwise operators - an overview
+00:54
+Take two integers x and y as inputs from the console using input() function. For each bitwise operator ( >> , <<, &, |, ~, and ^ ), print to the console, the result of applying these operators on the two input integers as shown in the example.
+
+Sample Input and Output:
+x: 52
+y: 20
+52 >> 20 is 0
+52 << 20 is 54525952
+52 & 20 is 20
+52 | 20 is 52
+~ 52 is -53
+52 ^ 20 is 32
+
+x = int(input("x: "))
+y = int(input("y: "))
+# calculate the value of x >> y and print it
+
+print ('%d >> %d is' %(x, y), x >> y     )
+
+# calculate the value of x << y and print it
+
+print ('%d << %d is' %(x, y),  x << y     )
+
+# calculate the value of x & y and print it
+
+print ('%d & %d is' %(x, y),  x & y     )
+
+# calculate the value of x | y and print it
+
+print ('%d | %d is' %(x, y), x | y      )
+
+# calculate the value of ~x and print it
+
+print ('~ %d is' %(x),    ~x    )
+
+# calculate the value of x ^ y and print it
+
+print ('%d ^ %d is' %(x, y),  x ^ y      )
+
+
+11.2.7. Understanding Two's Complement
+02:30
+Two's complement is used to store a negative numbers in the memory.
+
+The two's complement of a negative number is determined through these steps:
+Calculate the one's complement of the given negative number.
+Add binary 1 to the one's complement to obtain the two's complement.
+
+Below are the steps for arriving at the two's complement of a value -14
+Binary value of 14 ⟹ 00001110
+One's complement of 14 ⟹ 11110001
+                 Add 1 ⟹        1
+Two's complement value ⟹ 11110010
+
+Subtraction on binary values is performed using addition. For example in the below code:
+int x = 2
+int y = 1
+int diff 
+diff = y - x
+diff = y - x
+This is internally performed using addition as
+
+diff = y + (-x) #The -x is arrived at using two's complement.
+Click on the  button to know the working of two's complement in Python.
+
+Note: Do try out converting different negative values in the above Live Demo and observe how the carry-on bit is used.
+
+Take two integers num1 and num2 as inputs from the console using input() function. Perform two's complement on given two input integers, print the result to the console as shown in the example.
+
+Sample Input and Output:
+num1: 77
+num2: 5
+difference: 72
+
+x = int(input("num1: "))
+y = int(input("num2: "))
+
+print("difference: %d"%(x-y))
+
+___
+# Unit 1 - Lesson 12
+___
+
+12.1.1. Logical Operators - An overview
+00:10
+Logical Operators : A logical operator is derived from boolean algebra where the result is either True or False.
+
+It is generally used to represent logical comparison the way it is done in real life.
+
+1 represents True and 0 represents False. (Internally 0 represents False and anything else represents True)
+
+The logical operators supported in Python are similar to the logic gates and are as follows:
+
+1. and - Logical AND : The result is True, only if both the operands are True. ( 1 and 1 is the only condition where the result is 1, any other combination results in 0.)
+
+2. or - Logical OR : The result is True, if any one of the operands is True. ( 0 and 0 is the only condition where the result is 0, any other combination results in 1.)
+
+3. not - Logical NOT : The result negates the operand, i.e if the operand is True, the result is False and vice versa
+
+
+12.1.2. Logical Operators - An overview
+20:03
+The logical operators are used primarily in the expression evaluation to make a decision. They allow you to create complex conditions and control the flow of your program using conditional statements like if-else statements.
+
+
+
+The if-else statement provides two different paths of execution depending on the result of the condition.
+
+The body of if is executed when the condition associated with the expression is true.
+The body of else part is executed when the condition is evaluated to false.
+Indentation is used to separate both the if and else blocks.
+
+Below is the general syntax for the if-else statement :
+
+if(expression):
+	body of If
+else:
+	body of else
+
+Below is an example to illustrate the if-else construct.
+
+if(marks > distinction_marks):
+	print("User secured distinction")
+else:
+	print("User did not secure distinction")
+
+
+This is an example for how control statements works. Understand the example given above and solve the question given. We will learn more about if-else in coming lessons.
+
+
+
+Take two inputs from the user using the input() function, one is the gender of the person either M or F in string format and another one is the age of the person in integer format. Write a simple program to see whether the given person is eligible for concession or not and print the result as shown in the examples:
+
+
+
+Follow these instructions to identify whether the person is eligible for the concession or not.
+
+If the person is male and age >=65, Eligible for concession.
+If the person is female and age >= 60, Eligible for concession.
+In all other cases, the person is not eligible for concession.
+Sample Input and Output 1:
+M or F: F
+age: 70
+Eligible
+
+Sample Input and Output 2:M or F: M
+age: 63
+Not Eligible
+
+mf = input("M or F: ")
+age = int(input("age: "))
+
+
+# Check for concession and print the result
+if mf=='M':
+	if ( age>=65    ):
+		print("Eligible")
+	else:
+		print("Not Eligible")
+else:
+	if ( age>=60):
+		print("Eligible")
+	else:
+		print("Not Eligible")
+		
+12.1.3. Writing a program using logical "and"
+07:30
+Write a program to understand the logical and operator. Take three integers as input from the user using input() function. The program should print True if a is 6 and b is 6 and c is not 6, otherwise it should print False.
+
+Sample Input and Output 1:
+a: 6
+b: 6
+c: 1
+True
+Sample Input and Output 2:
+a: 2
+b: 3
+c: 5
+False
+
+# write your code here
+a = int(input("a: "))
+b = int(input("b: "))
+c = int(input("c: "))
+
+if a==6 and b==6 and c!=6 : #write the condition
+	print('True')
+else:
+	print('False')
+
+
+12.1.4. Using Logical "or"
+03:44
+Write a program to understand the logical or operator. Take two integers a and b as inputs from the console using input() function. The program should print True if either of the inputs is 6, their sum is 6, or their difference is 6, Otherwise it should print False.
+
+Sample Input and Output1:
+a: 59
+b: 6
+True
+
+Sample Input and Output2:
+a: 30
+b: 30
+False
+
+a = int(input("a: "))
+b = int(input("b: "))
+c=a+b
+d=a-b
+# complete the code
+if a==6 or b==6 or c==6 or d==6    :
+	print("True")
+else:
+	print("False")
+	
+12.1.5. Using Logical "not"
+02:30
+The logical not operator negates the boolean operand given to it. E.g. not True is False. Similarly, not(a and b) is the expression which indicates True, only when both a and b are not True
+
+Write a program to understand the logical not operator. The program should print Weekend if the day is either SAT or SUN, otherwise it should print Not Weekend. Take the input day from the user.
+
+Sample Input and Output1:
+Enter day: SAT
+Weekend
+Sample Input and Output2:
+Enter day: MON
+Not Weekend
+Hint: Consider the days of the week are represented as MON, TUE, WED, THU, FRI, SAT, SUN
+
+# Program to illustrate logical not
+a = input("Enter day: ")
+
+if a=="SAT" or a=="SUN":
+	print("Weekend")
+else:
+	print("Not Weekend")
+	
+Membership Operators
+12.2.1. The membership operators
+06:14
+The membership operators in Python are used to test the presence of an operand in a String, List, Tuple, etc. The result of this operator is a Boolean value (either True or False).
+
+The membership operators in Python are:
+
+in : Result is True if the left hand side operand exists in the right hand side operand.
+
+Let us consider a simple example:
+'s' in "Python" # The result is False. 
+not in: Result is True if the left hand side operand does not exist in the right hand side operand.
+
+Let's consider a simple example:
+'s' not in "Python"    # The result is True.  
+
+The right hand operand can be a string, list, tuple, set or dictionary.
+
+The left-hand side operand should be a single element of the right-hand side object.
+
+For strings, the Left Hand Side (LHS) can be any string. If this string exists in the RHS string, then True is returned. Otherwise False is returned.
+
+For all other data types (Lists, Tuples, Sets, Dictionaries, etc.) the LHS should be a single element.
+
+Let's consider an example for strings:
+
+'am' in 'I am working'
+will return True
+
+'am' not in 'I am working'
+will return False
+
+'not' in 'I am working' 
+will return False
+
+'Hot' not in 'I am working'
+will return True
+
+"" in 'I am working'
+will return True because empty strings are always considered to be a substring of any string
+
+Let's consider an example for list:
+
+1 in [9,7,5,3,1,2,4]
+returns True
+
+55 not in [1,2,3,4,5,67]
+will return True
+
+'code' in ['code', 'is', 'life']
+will return True
+
+'Life' in  ['code', 'is', 'life']
+will return False
+
+For tuples and sets, the example is similar to that of list
+
+Let's consider an example for dictionary:
+
+For dictionary the in operator checks existence of the key.
+
+basket = {'apple':20, 'orange':30, 'apple':10, 'pear':15, 'banana':25}
+
+'apple' in basket
+returns True
+
+'grape' in basket 
+returns False
+
+
+12.2.2. Membership Operators - an Overview
+04:27
+Take two strings as input from the console using input() function. Write a program using membership operators to check whether the given second string is present in the first string or not. Print the result of the two input strings to the console, as shown in the example.
+
+Sample Input and Output1:
+str1: Hello World Welcome To Python Programming
+str2: Pro
+Pro in Hello World Welcome To Python Programming: True
+
+Sample Input and Output2:
+str1: Regular Expression
+str2: advanced
+advanced in Regular Expression: False
+Follow the instructions and write the code in the space provided
+
+str1 = input("str1: ")
+str2 = input("str2: ")
+
+print(f"{str2} in {str1} :",str2 in str1)
+
+12.2.3. Writing example using Membership operator in
+01:06
+Take two strings as input from the console using input() function. For each membership operator in and not in, print to the console, the result of the two input strings as shown in the example.
+
+Sample Input and Output:
+str1: Hello World
+str2: worlds
+worlds in Hello World is: False
+worlds not in Hello World is: True
+
+# Program to illustrate in and not in for strings
+str1 = input("str1: ")
+substr = input("str2: ")
+
+# check whether substr in str1 and print the result
+print(substr, "in", str1, "is:", substr in str1)
+
+#check whether substr not in str1 and print the result
+print(substr, "not in", str1, "is:",substr not in str1       )
+
+12.2.4. Write an example using Membership operator not in
+08:31
+Let's write a simple program using the membership operator in and not in.
+
+The below program has a predefined list. Take an input element from the user to check whether the given element is present in the list or not. Print the result as shown in the example.
+
+Sample Input and Output:
+['A', '123', 'Ramana', [1, 2], 34.56, '55']
+element: A
+A in ['A', '123', 'Ramana', [1, 2], 34.56, '55'] is: True
+A not in ['A', '123', 'Ramana', [1, 2], 34.56, '55'] is: False
+
+# Program to illustrate membership operators
+L1 = ['A', '123', 'Ramana', [1, 2], 34.56, '55']
+# for 34.56 returns False as output because, the input() takes the input as string.
+
+# print L1
+print(L1)
+# take input for element
+e=input("element: ")
+# check whether the element is present in L1 and print the result
+print(e, "in", L1 ,"is:",e in L1 )
+# check whether the element is not present in L1 and print the result
+print(e, "not in", L1, "is:",e not in L1 )
+
+
+
 

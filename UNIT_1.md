@@ -2,7 +2,7 @@ _______
 # Unit 1 - Lesson 1
 ____
 
-##### 1.1.1. What is a computer programming language?
+#### 1.1.1. What is a computer programming language?
 
 - Language is a tool for communication.
 
@@ -25,7 +25,7 @@ In Python we provide instructions in the below format
 - The above code represents a simple Python program which prints "Hello!".
 - In the above case, we have provided some instructions in a computer programming language to the computer to display a greeting message. This sequence of instructions is called a program.
 
-##### 1.1.2. The genesis of Python
+#### 1.1.2. The genesis of Python
 
 The Python programming language was developed in the 1980s by Guido Van Rossum at Centrum Wiskunde & Informatica (CWI) in the Netherlands as a successor to the ABC language (itself inspired by SETL), capable of exception handling and interfacing with the Amoeba operating system.
 
@@ -51,7 +51,7 @@ Do not panic. The features mentioned above will be discussed in detail in the la
 
 Python can be used for creating computer applications, computer games or even for testing microchips.
 
-##### 1.1.3. Python Program Life Cycle
+#### 1.1.3. Python Program Life Cycle
 
 The instructions (called source code) written in Python programming language can be executed in two modes:
 
@@ -98,7 +98,7 @@ Traceback (most recent call last):
   File " ", line 1, in 
 ZeroDivisionError: division by zero
 
-##### 1.1.4. Difference between Compiler and Interpreter
+#### 1.1.4. Difference between Compiler and Interpreter
 
 |Compiler|	Interpreter|
 |----|-----|
@@ -110,7 +110,7 @@ ZeroDivisionError: division by zero
 |Errors are displayed after entire program is checked|	Errors are displayed for every instruction interpreted (if any)|
 |Example : C compiler|	Example : Python|
 
-##### 1.1.5. High level language categories
+#### 1.1.5. High level language categories
 
 The Programming Languages are divided into following categories:
 
@@ -131,7 +131,7 @@ Examples include Go (Golang) and Erlang.
 8. **Object-Oriented languages:** These languages support object-oriented programming (OOP) concepts like classes, objects, inheritance, and polymorphism.
 Examples include Java, C++, C#, and Python.
 
-##### 1.1.6. Identify the Error
+#### 1.1.6. Identify the Error
 
 The code in the editor has a syntax error.
 
@@ -142,7 +142,7 @@ Note: If you are unable to find the error, click on Submit to see the error mess
 **Source code:**
 ````print("Python is Easy")````
 
-##### 1.1.7. Identify the Error
+#### 1.1.7. Identify the Error
 
 The below code in the editor has a syntax error.
 
@@ -153,7 +153,7 @@ Note: If you are unable to find the error, click on Submit to see the error mess
 **Source code:**
 ````print("Python is not Typhoon")````
 
-##### 1.1.8. Other usages of print function
+#### 1.1.8. Other usages of print function
 
 Here are a few interesting ways in which the print() function works.
 
@@ -182,7 +182,7 @@ print("Abracadabra"*n)
 # write your code here to print the given word n times
 ```
 
-##### 1.1.9. Fill in the missing code
+#### 1.1.9. Fill in the missing code
 
 The print statement in the below code is supposed to generate the following output:
 ````where there is a will, there is a way````
@@ -192,7 +192,8 @@ add or remove commas (,) accordingly to achieve the desired output.
 ````python
 print("wh" "ere" ,"the" "re", "is" ,"a", "will,", "th""ere", "is", "a", "way")
 ````
-##### 1.1.10. Features of Python
+
+#### 1.1.10. Features of Python
 
 Features of Python Programming Language
 
@@ -212,9 +213,9 @@ ________
 
 # Unit 1 - Lesson 2
 _________
-##### Types of Errors
+#### Types of Errors
 
-##### 2.1.1. Syntax Error
+#### 2.1.1. Syntax Error
 
 An error in programming is generally a bug in the code introduced by the developer. There are generally three types of errors Syntax, Logical, and Runtime. To correct these known errors, exception-handling mechanisms are used.
 
@@ -226,7 +227,7 @@ Let's understand about Syntax Errors: These errors are mistakes that happen when
 3. Misspelling a keyword.
 4. Wrong indentation.
 
-##### 2.1.2. Logical Errors
+#### 2.1.2. Logical Errors
 
 **Logical Errors:** These are also known as semantic errors and are tough to identify. These errors occur when a program compiles and runs but doesn’t produce the expected output. They are often due to incorrect logic or misuse of a language’s syntax.
 
@@ -237,7 +238,7 @@ Let's understand about Syntax Errors: These errors are mistakes that happen when
 4. Integer division instead of floating-point division.
 5. Working on operator precedence in a wrong way.
 
-##### 2.1.3. RunTime Errors
+#### 2.1.3. RunTime Errors
 **Runtime errors:**
 
 These errors occur during the execution of a program after it has been successfully compiled or interpreted. These errors are not detected during the compilation or interpretation phase because they depend on specific conditions that occur during the program’s execution.
@@ -254,7 +255,7 @@ When a runtime error occurs, the program “crashes,” or stops running. This i
 _______
 # Unit 1 - Lesson 3
 ________
-##### 3.1.1. Understanding Python Comments
+#### 3.1.1. Understanding Python Comments
 
 A computer program is a collection of instructions or statements.
 
@@ -285,7 +286,7 @@ Below are a few important points regarding comments:
 4. One cannot write comments inside string literals which are enclosed between single-quotes or double-quotes. The # character inside a string literal is treated as part of the string's content.
 5. In a comment anything written after # in a particular line is ignored by the interpreter. Meaning it does not form part of the executable code in the program.
 
-##### 3.1.3. Understanding Docstring in Python
+#### 3.1.3. Understanding Docstring in Python
 
 **Docstrings:**
 - Python has a way to specify documentation comments known as docstrings.
@@ -345,7 +346,7 @@ output:
 None
 ````
 
-##### 3.2.1. Understanding Identifiers in Python
+#### 3.2.1. Understanding Identifiers in Python
 
 **Identifiers:**
 

@@ -939,4 +939,395 @@ ______
 # Unit 1 - Lesson 6
 _______
 
+#### 6.1.1. Understanding Types of Data Types
+
+Computer programming is all about processing data. In computer programming, the data is always represented in the binary form (0's and 1's), i.e. groups of Bits called as Bytes.
+
+In the real world, we come across different types of data like age of a person(integer), number of rooms in a house (integer), price(floating-point number), height (floating-point number), Names of people, places and things (strings), inventory list (list) etc.
+
+Data types categorize data for efficient processing in Python and all programming languages. They assign specific characteristics to data, enhancing accuracy and control in operations.
+
+The data type of the data determines :
+ possible values it can be assigned.
+ possible operations that can be performed. (Arithmetic operations can be applied on numeric data and not strings)
+ the format in which it is stored in the memory.
+ the amount of memory allocated to store the data.
+
+Some of the built-in data types supported in Python are:
+Number
+String
+List
+Tuple
+Set
+Dictionary
+
+In Python, each value possesses a data type. A variable in Python is capable of holding a value of any data type.
+
+The same variable in Python can refer to data of different data types at different times. Thus, variables in Python are not strongly typed, implying that you don't have to explicitly declare the data type of a variable when creating it.
+
+Let us consider an example:
+
+a = 5 # variable a now refers to Integer data type
+a = 90.45 # variable a now refers to Float data type
+a = "India"  # variable a now refers to String data type
+a = [5, 90.45, "India"]  # variable a now refers to List data type
+
+We use the built-in function type() to determine the type of data that a variable is referring to at any given point in time.
+
+The syntax of the type() function is as follows :
+type(variable_name)
+returns the data type of variable_name
+Variable Assignment		 	Output of print(type(a))
+a = 345					<class, 'int'>
+a = 34.56				<class, 'float'>
+a = "India"				<class, 'str'>
+a = [5, 90.45, "India"]			<class, 'list'>
+
+
+6.2.1. Numbers
+01:59
+Numbers
+
+We have three different categories of numbers in Python. They are :
+int
+float
+complex
+
+1.int:
+It stands for integer. This Python data type stores signed integers.
+In Python an integer can be of any length, with the only limitation being the available memory.
+
+Example 1:
+# type() function finds the class the variable belongs.
+a = -7
+print(type(a)) # will print output as follows
+<class 'int'>
+Example 2:
+a = 12536984596965565656236534754587821564
+print(type(a)) # will print output as follows
+<class 'int'>
+
+2.float:
+It stands for floating-point numbers. This Python data type stores floating-point real values.
+For example : An int can only store the number 20, but float can also store numbers with decimal fractions like 20.25.
+
+Example:
+a = 3.0 
+print(type(a)) # will print output as follows
+<class 'float'>
+
+3.complex:
+It stands for complex numbers. A complex number is a combination of a real number and an imaginary number.
+It takes the form of a + bj Here, a is the real part and b*j is the imaginary part.
+
+Example
+a = 2 + 3j # It is important to note that there should not be any space between 3 and j
+print(type(a)) # will print output as follows
+<class 'complex'>
+Write the missing code in the given program to know which class the given variable a belongs to.
+
+````python
+a = 365
+print(type(a))#Print type of a
+
+a = 345.65
+print(type(a))#Print type of a
+
+
+a = 45 + 5j
+print(type(a))#Print type of a
+````
+
+6.3.1. String data type
+01:01
+In Python, a string is a sequence of characters enclosed inside a pair of single quotes(‘) or double quotes(“). Even triple quotes (''') are used to represent multi-line strings.
+
+The computer doesn’t see letters at all. Every letter you use is represented by a number in memory.
+
+For example, the letter A is actually the number 65. This is called encoding. There are two types of encoding for characters – ASCII and Unicode.
+
+ASCII uses 8 bits for encoding whereas Unicode uses 32 bits. Python uses Unicode for character representation.
+
+An individual character within a string is accessed using an index.
+
+Index starts from 0 to n-1, where n is the number of characters in the string.
+
+Python allows negative indexing in strings. The index of -1 refers to the last item in the string, -2 refers to the second last item and so on.
+
+
+
+In Python, a string of length 1 is treated as a character.
+
+Ways of creating strings in Python are:
+
+1. Using single quotes (' ')
+
+str = 'Welcome To Python World'
+print(str)# will print output as follows  
+
+Output :
+Welcome To Python World
+If single quote (') is part of the string, then the characters of the string are enclosed between double quotes(").
+
+sentence =  "Welcome to Python's world"
+print (sentence) # will print output as follows
+
+Output :
+Welcome to Python's world
+If single quote (') is part of the string, and the characters are enclosed between single quotes, then a backslash (\) should be added before (') of the string.
+
+The other way of having a single quote in the string content and enclosing the string within single quotes is using a backslash(\)
+sentence =  'Welcome to Python\'s world' # observe a backslash (\) before (')
+print (sentence) # will print output as follows
+
+Output :
+Welcome to Python's world
+2. Using double quotes (" ")
+
+str = "Welcome to the world of Python"
+print(str) # will print output as follows
+
+Output:
+Welcome to the world of Python
+3. Using triple double quotes(""" """)
+
+We use triple double quotes(""" """) to create multi-line strings in Python.
+
+str = """Welcome to the world of Python
+I love Python and Python is very easy to learn
+Practice makes man perfect"""
+print(str) # will print output as follows
+
+Output : 
+Welcome to the world of Python
+I love Python and Python is very easy to learn
+Practice makes man perfect
+We can also use triple single quotes(''' ''') to create multi-line strings in Python.
+
+str = '''Welcome to the world of Python
+I love Python and Python is very easy to learn
+Practice makes man perfect'''
+print(str) # will print output as follows
+
+Output : 
+Welcome to the world of Python
+I love Python and Python is very easy to learn
+Practice makes man perfect
+Note: Using triple single quotes or triple double quotes
+
+______
+# Unit 1 - Lesson 7
+______
+7.1.1. Understanding List Creation
+15:15
+List is a data type of Python used to store multiple values of different types of data at a time. List are represented with [].
+
+A list can be created by putting comma separated values between square brackets [].
+
+The following program shows creation of two lists namely list1 and list2 :
+list1 = [1, 2, "one", "hi"]
+list2 = [4, 5, "hello"]
+Values stored in the list are accessed using an index.
+
+Index range between 0 to n-1, where n is the number of values in the list
+
+Python allows negative indexing for lists. The index of -1 refers to the last value of the list, -2 refers to the second last value of the list and so on.
+
+Printing lists: The lists can be printed using the built-in function print() as shown below.
+
+list1 = [1, 2, "one", "hi"]
+print(list1) # will print output as follows
+
+Output :
+[1, 2, 'one', 'hi']
+list2 = [4, 5, "hello"]
+print(list2) # will print output as follows
+
+Output :
+[4, 5, 'hello']
+
+Accessing Values in Lists: A value at a particular index in a list is accessed using listname[index]
+
+list2 = [4, 5, "hello"]
+print(list2[1]) # prints the value present at 1st index in list2
+
+Output :
+5
+Slicing lists: Slicing is used to access a subset of of a list. For a list l = [1, 4, 5, 7, 4, 15], a subset of list from 2nd index to 3rd index is obtained by l[2:4] which is equal to [5,7]. Slicing can be understood using the following examples:
+
+Let us assume that we have a list l = [1, 4, 6, 22, 44, 12, 55, 66]
+
+Slicing expression
+
+  Value
+
+Explanation
+
+l[1:4]
+
+[4, 6, 22]
+
+The starting index is 1 and the ending index is 4. (Observe that the value at the index 4 is not included in the result)
+
+l[3:-3]
+
+[22, 44]
+
+The starting index is 3 and the ending index is -3 which represents the third last element i.e 12
+
+l[3:]
+
+[22, 44, 12, 55, 66]
+
+The stopping index is not specified so slicing is done till the end of the list.
+
+l[:4]
+
+[1, 4, 6, 22]
+
+The starting index is not given so 0 is considered as starting index.
+
+
+Slicing operation can be performed on strings as well.
+
+In Python, the plus (+) operator is a list concatenation operator and the asterisk (*) operator is the repetition operator.
+
+Concatenating lists: We can concatenate two lists using (+) operator.
+
+list1 = [1, 2, 'one', 'hi']
+list2 = [4, 5, 'hello']
+print(list1 + list2) # will print output as follows
+
+Output: 
+[1, 2, 'one', 'hi', 4, 5, 'hello']
+Repeating lists: We can print a list multiple times using (*) operator as shown below.
+
+list2 = [4, 5, 'hello']
+print(2 * list2) # will print output as follows
+
+Output :
+[4, 5, 'hello', 4, 5, 'hello']
+Working with nested lists: The items of the list can be lists themselves, which means that the lists can be nested.
+
+Let us consider example:
+list1 = [23, 5.65, ["A", 34.23], "India"]
+In the above example, the third element (i.e index = 2) of list1 is a list.
+
+We access the 3rd item by list1[2], which is a list and the second item of this list can be accessed using index 1. So, list1[2] [1] will be 34.23.
+
+Write the missing code given to understand List Concatenation. Follow the instructions given as comment lines in the program.
+
+````python
+value1 = input("Enter the first value: ")
+value2 = input("Enter the second value: ")
+value3 = input("Enter the third value: ")
+list1 = [value1,value2,value3] # create llist one with above three variables
+print("List1:",list1) 
+#print the list1
+
+value4 = input("Enter the first value: ")
+value5 = input("Enter the second value: ")
+value6 = input("Enter the third value: ")
+list2 = [value4,value5,value6] 
+# create llist one with above three variables
+
+
+# print the list2
+print("List2:",   list2   )
+# Concatenate list1 and list2 and print the result
+
+print("List after Concatenation:", list1 + list2     )
+````
+7.1.2. Accessing items in a List
+19:04
+We can access the elements of a list by using index similar to accessing the individual characters of a string.
+
+Unlike strings, lists are mutable i.e. we can modify the list (change the items, add items and reassign an item).
+
+The following operations can be performed on the list :
+ Modify or reassign an item present at a particular index.
+ Add an item to the list at a particular index.
+ Remove an item from the list.
+Consider a list chars equal to ['a', 'b', 'c', 'd' ], the code to change the item at 3rd index from 'd' to 'xyz' is as follows :
+
+chars = ['a', 'b', 'c', 'd']
+chars[3] = 'xyz'
+print(chars) # will print output as follows
+
+Output :
+['a', 'b', 'c', 'xyz']
+Trying to access an index that does not exist in a list results in an error called "IndexError".
+
+chars = ['a', 'b', 'c', 'd']
+chars[4] = 'abcd' # Valid indices are only 0, 1, 2, and 3.
+
+Output : 
+Traceback (most recent call last):  
+	File "1.py", line 2, in 
+		chars[4] = 'abcd'
+IndexError: list assignment index out of range
+Add an item to the list
+
+The append() method is used to add items to the list.
+
+chars = ['a', 'b', 'c', 'd']
+chars.append("abcd")
+print(chars) # will print output as follows
+
+Output :
+['a', 'b', 'c', 'd', 'abcd']
+Consider the following example :
+
+chars = ['a', 'b', 'c', 'd']
+chars.append( ['e', 'f'])  # This will append the list ['e', 'f'] as the last item to the chars list.  
+print(chars) # will print output as follows 
+
+Output :
+['a', 'b', 'c', 'd', ['e', 'f']]
+The above program shows that if a list is passed to append() method, it would append the entire list as a single item to the list.
+
+Adding items of a list as individual items of another list
+
+The extend() method is used to add items of one list to be added as individual items of another list.
+
+chars = ['a', 'b', 'c', 'd']
+list2 = [1, 2, 3]
+chars.extend(list2)
+print(chars) # will print output as follows
+
+Output : 
+['a', 'b', 'c', 'd', 1, 2, 3]
+
+Note : Closely observe that the items of list2 are added as individual items to the chars list.
+Fill in the missing code in the program. Follow the instructions given in comment lines.
+
+````python
+
+value1 = input("Enter the first value: ")
+value2 = input("Enter the second value: ")
+value3 = input("Enter the third value: ")
+
+list1 = [value1,value2,value3] # create list1
+print(list1[0])
+print(list1[1])
+print(list1[2])
+
+# print every element in list1 using index
+list1[2] = "Python"
+print(list1) # print list1
+
+list1.append("Code is Life") # add "Code is Life" to list1
+print(list1) # print list1
+
+value4 = input("Enter the first value: ")
+value5 = input("Enter the second value: ")
+value6 = input("Enter the third value: ")
+
+list2 = [value4,value5,value6]# create list2
+list1.extend(list2)
+# Extend list1 with the elements from list2
+print(list1)
+# print list1
+
+````
 

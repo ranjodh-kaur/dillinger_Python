@@ -131,6 +131,28 @@ Examples include Go (Golang) and Erlang.
 8. **Object-Oriented languages:** These languages support object-oriented programming (OOP) concepts like classes, objects, inheritance, and polymorphism.
 Examples include Java, C++, C#, and Python.
 
+##### 1.1.6. Identify the Error
+
+The code in the editor has a syntax error.
+
+Find and fix the error and click on Submit.
+
+Note: If you are unable to find the error, click on Submit to see the error message.
+````prnt("Python is Easy")````
+**Source code:**
+````print("Python is Easy")````
+
+##### 1.1.7. Identify the Error
+
+The below code in the editor has a syntax error.
+
+Fix the error and Submit.
+
+Note: If you are unable to find the error, click on Submit to see the error message.
+````     Print("Python is not Typhoon")                  ````
+**Source code:**
+````print("Python is not Typhoon")````
+
 ##### 1.1.8. Other usages of print function
 
 Here are a few interesting ways in which the print() function works.
@@ -152,6 +174,24 @@ Here are a few interesting ways in which the print() function works.
 will generate the output as
 ````ABCABCABC````
 
+**Write code to print the magic word Abracadabra, n times, using the repeat character ( * ).**
+In the given code, we are taking input from the user. We will learn more about input statements in the upcoming lessons.
+```python
+n = int(input())
+print("Abracadabra"*n)
+# write your code here to print the given word n times
+```
+
+##### 1.1.9. Fill in the missing code
+
+The print statement in the below code is supposed to generate the following output:
+````where there is a will, there is a way````
+add or remove commas (,) accordingly to achieve the desired output.
+````print("wh", "ere" "the", "re" "is" "a" "will," "th","ere", "is" "a", "way")````
+**Source Code:**
+````python
+print("wh" "ere" ,"the" "re", "is" ,"a", "will,", "th""ere", "is", "a", "way")
+````
 ##### 1.1.10. Features of Python
 
 Features of Python Programming Language
@@ -535,4 +575,43 @@ age,length,language =25,24.789,"Python"  # Assign the values to the variables
 print(age)
 print(length)
 print(language)
+````
+
+##### 4.1.5. Chained Assignment
+
+In Python, assignment statements do not return a value. Chained assignment is recognised and supported as a special case of the assignment statement.
+
+````a = b = c = x```` is called a chained assignment in which the value of x is assigned to multiple variables a, b, and c.
+
+Let us consider a simple example:
+````python
+a = b = c = d = 10
+print(a) # will print result as 10
+print(b) # will print result as 10
+print(c) # will print result as 10
+print(d) # will print result as 10
+````
+Here, we are initializing the variables a, b, c, d with value 10.
+
+**Write a program to assign a user given value to a, b, c variables.**
+
+**Note:** Let us assume that input() is used to read values given by the user. We will learn about input() in later sections.
+Here,
+````a = b = c = str1````
+Sample Input and Output:
+````
+Enter a value: Hello Python
+Value of a: Hello Python
+Value of b: Hello Python
+Value of c: Hello Python
+````
+**Source Code:**
+````python
+str1 = input("Enter a value: ")
+a=b=c=str1
+# Assign str1 to three objects a, b and c
+
+print("Value of a:", a) # Print a
+print("Value of b:",  b ) # Print b
+print("Value of c:",  c ) # Print c
 ````

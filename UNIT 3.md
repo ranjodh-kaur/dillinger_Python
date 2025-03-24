@@ -466,3 +466,51 @@ After deleting a string variable, trying to access it leads to NameError due to 
 In Python, why does attempting to delete a character at a specific index within a string result in an error?
 
 ````Answer: Deleting characters within strings violates the immutability principle of strings.````
+
+___________
+# UNIT 3 (Lesson 2)
+___________
+#### Built-in String Methods
+#### 37.1.1. Functions of String Data Type
+
+Python provides the following built-in string methods (operations that can be performed with string objects).
+````python
+Syntax to execute these methods is: stringobject.methodname()
+````
+
+Given an input string ````a = "hello python"````, now understand the working principles of the following methods:
+
+1) capitalize() - Capitalizes first letter of a string.
+
+````print(a.capitalize())    # Result: Hello python````
+
+2) upper() - Converts the string to uppercase.
+````
+print(a.upper())         # Result: 'HELLO PYTHON'
+````
+4) lower() - Converts the string to lowercase.
+
+````print(a.lower())         # Result: 'hello python'````
+
+5) title() - Converts the string to title case. i.e., first characters of all the words of string are capitalized.
+
+````print(a.title())         # Result: 'Hello Python'````
+
+6) swapcase() - Swap the case of characters. i.e., lowercase into uppercase and vice versa.
+
+````print(a.swapcase())      # Result: 'HELLO PYTHON'````
+
+7) split() function returns a list of words separated by space.
+
+````print(a.split())         # Result: ['hello', 'python']````
+
+8) center(width,"fillchar") Center the string within a specified width using a fill character. Observe the below example:
+
+````print(a.center(20, '*'))   # Result: '****hello python****'````
+
+Here, width is 20 and string length is 12, so now we need to fill the remaining width(20 - 12 = 8) with '*' special character.
+
+Select all the correct statements among the provided options.
+Answer: In Python, we can convert strings of Uppercase letters into lower case and lower case to upper case using swapcase() method.
+ANswer: print('abcpyxyzpython', 3, 10) - Outputs: abcpyxyzpython 3 10.
+

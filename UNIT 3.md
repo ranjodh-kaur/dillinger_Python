@@ -511,6 +511,8 @@ print(a.upper())         # Result: 'HELLO PYTHON'
 Here, width is 20 and string length is 12, so now we need to fill the remaining width(20 - 12 = 8) with '*' special character.
 
 Select all the correct statements among the provided options.
-Answer: In Python, we can convert strings of Uppercase letters into lower case and lower case to upper case using swapcase() method.
-ANswer: print('abcpyxyzpython', 3, 10) - Outputs: abcpyxyzpython 3 10.
+
+````python
+Answer: In Python, we can convert strings of Uppercase letters into lower case and lower case to upper case using swapcase() method.````
+````Answer: print('abcpyxyzpython', 3, 10) - Outputs: abcpyxyzpython 3 10.````
 

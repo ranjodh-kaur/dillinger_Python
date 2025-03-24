@@ -130,4 +130,49 @@ Input str: Python
 output: ytho
 ````
 
+````python
+str=(input("str: "))
+l=len(str)
+print("output:",str[1:l-1])
+````
+
+#### 36.2.5. Concatenation of strings
+
+Concatenation of strings refers to the process of linking or combining two strings into a single string. The (+) operator joins the text on both sides of the operator.
+
+**Write a program to take two strings as input from the console using input() function. Concatenate those two strings and print the result as shown in the sample test case.**
+
+Sample Input and Output:
+````python
+str1: Python
+str2: Jython
+Python Jython
+Hint: Use (" ") for providing space between the two concatenated strings.
+````
+````python
+str1=(input("str1: "))
+str2=(input("str2: "))
+print(str1+ " "+ str2)
+````
+
+#### 36.2.6. Program to perform concatenation on two strings.
+
+Write a program that takes two input strings str1 and str2 and returns the result by concatenating them in the order str1str2str2str1.
+
+Print the result as shown in the sample test case.
+
+````python
+Sample Input and Output:
+str1: Code
+str2: Tantra
+result: CodeTantraTantraCode
+````
+
+````python
+
+# Type your content here...
+str1=(input("str1: "))
+str2=(input("str2: "))
+print("result:",str1+str2+str2+str1)
+````
 

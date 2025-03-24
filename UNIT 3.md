@@ -1,3 +1,7 @@
+___________
+# UNIT 3 (Lesson 1)
+___________
+
 #### 36.1.1. Introduction to Strings
 Strings in python are represented with prefixing and suffixing the characters with quotation marks (either single quotes (') or double quotes (")).
 - Characters in a string are accessed using an index which is an integer (either positive or negative).
@@ -336,6 +340,11 @@ Sample Input and Output:
 str: Python
 PythonPythonPythonPython
 nohtyPnohtyPnohtyP
+````
+````python
+str=input("str: ")
+print(4*str)
+print(str[-1::-1]*3)
 ````
 
 #### 36.2.13. Program to print 3 copies of first three characters of a string.

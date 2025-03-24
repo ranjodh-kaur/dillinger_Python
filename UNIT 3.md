@@ -550,19 +550,19 @@ print(b.join(L1))    # Concatenates each item in the list with '.' Result: 'www.
 Print the result as shown in the sample test cases.
 ````
 Test case 1
-str:·Python is high level language	
-PYTHON·IS·HIGH·LEVEL·LANGUAGE⏎	
-Python·Is·High·Level·Language⏎	
-['Python',·'is',·'high',·'level',·'language']⏎	
-width:·25	
-fillchar:·%	
-Python·is·high·level·language⏎	
-python·is·high·level·language⏎	
-Enter·a·joining·character:·@	
+str: Python is high level language	
+PYTHON IS HIGH LEVEL LANGUAGE⏎	
+Python Is High Level Language⏎	
+['Python', 'is', 'high', 'level', 'language']⏎	
+width: 25	
+fillchar: %	
+Python is high level language⏎	
+python is high level language⏎	
+Enter a joining character:·@	
 P@y@t@h@o@n@·@i@s@·@h@i@g@h@·@l@e@v@e@l@·@l@a@n@g@u@a@g@e⏎	
-old·substring:·high	
-new·substring:·low	
-Python·is·low·level·language⏎
+old substring: high	
+new substring: low	
+Python is low level language⏎
 ````
 
 ````python

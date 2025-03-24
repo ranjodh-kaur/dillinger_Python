@@ -102,20 +102,25 @@ Let's consider below examples to understand about slicing briefly:
 ````Assume that a = "Python",````
 
 Example1 - Slicing from a starting index to the end of the string:
+
 ````print(a[0:])      # Result: Python````
 
 Example2 - Slicing from the beginning to an ending index (exclusive):
+
 ````print(a[:6])      # Result: Python````
 
 Example3 - Specifying both start and end indexes:
+
 ````print(a[0:4])     # Result: Pyth````
 This code snippet extracts a sub-string from a specified start index to the end index of the string.
 
 Example4 - Using step for traversal:
+
 ````print(a[::1])     # Result: Python ````
 ````print(a[::-1])    # Result: nohtyP ````
 
 Example5 - Using step with negative value for reversed traversal:
+
 ````print(a[-1::-3])   # Result: nt ````
 ````print(a[4:1:-1])   # Result: oht ````
 ````print(a[2:5:-1])   # Result: ' ' ````

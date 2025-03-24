@@ -116,7 +116,9 @@ Example5 - Using step with negative value for reversed traversal:
 
 In the last case, when trying to go from index 2 to 5 in reverse, it results an empty string because the direction and range conflicts.
 
-Given a string strange = "ABCDEFGHIJKL", predict the result when result = strange[-9:-4] ? Answer: "DEFGH"
+Given a string strange = "ABCDEFGHIJKL", predict the result when result = strange[-9:-4] ? 
+
+````Answer: "DEFGH"````
 
 #### 36.2.4. Write a program to print a string after removing first and last characters
 
@@ -176,3 +178,245 @@ str2=(input("str2: "))
 print("result:",str1+str2+str2+str1)
 ````
 
+#### 36.2.7. Program to remove a character from string based on integer value given by the user.
+
+Write a program to remove a character from a string based on integer value given by the user. Treat the input as an index of a string.
+
+Print the result as shown in the sample test cases.
+
+
+````python
+Sample Input and Output 1:
+
+str: Python Programming
+num: 9
+Python Prgramming
+````
+````python
+Sample Input and Output 2:
+
+str: Strings
+num: 10
+num should be positive, less than the length of str
+````
+````python
+# Type your content here...
+str=(input("str: "))
+num=(int(input("num: ")))
+if num>len(str):
+	print("num should be positive, less than the length of str")
+else:
+	print("output:",str[0:num]+str[num+1:])
+````
+ 
+#### 36.2.8. Program to print the concatenated string by excluding first character.
+
+Write a program to take two strings as input from the user. Concatenate those two strings by removing the first character from both and print the result as shown in the sample test case.
+
+````python
+Sample Input and Output 1:
+str1: Python
+str2: Java
+output: ythonava
+
+
+Sample Input and Output 2:
+str1: a
+str2: b
+null
+````
+
+````python
+# Type your code here...
+str1=(input("str1: "))
+str2=(input("str2: "))
+if len(str1) > 1 and len(str2) > 1:
+	print("output:", str1[1:] + str2[1:])
+else:
+	print("null")
+````
+
+#### 36.2.9. Program to swap first and last characters of given string and display the result
+
+Write a program to take a string as input from the user. Swap the first and last characters of the given string. Print the resultant string as shown in the sample test case.
+
+Follow the below constraints while writing the program:
+
+- If the length of the string is 1 then print the input string as it is.
+- If the length of the string is 0 (zero) then print null as output.
+
+````python
+Sample Input and Output 1:
+
+Input str: Active
+output: ectivA
+
+
+Sample Input and Output 2:
+
+Input str: T
+output: T
+````
+
+````python
+
+# Type your code here...
+s=(input("str: "))
+l=len(s)
+if l ==1:
+	print(s)
+elif l==0:
+	print("null")
+else:
+	print("output:",s[-1]+s[1:-1]+s[0])
+````
+
+#### 36.2.10. Program to print first and last two characters of given string
+
+Write a program to take a string as input from the user. Print the first and last two characters of a string. If the length of the string is less than 3 then print the input string as it is.
+
+Print the result as shown in the sample test case.
+
+````python
+Sample Input and Output 1:
+input: Code Tantra
+output: Cora
+
+
+Sample Input and Output 2:
+input: hi
+output: hi
+````
+````python
+# Type Content here...
+str=input("input: ")
+if len(str)<3:
+	print("output:",str)
+else:
+	print('output:',str[0:2]+str[-2:])
+````
+
+ #### 36.2.11. Understanding Membership Operator
+
+Membership Operators in and not in are used to check whether a certain element exits within a sequence such as string, list, tuple or set.
+The in operator returns True if the specified element is found in the sequence. Otherwise, it returns False
+The not in operator returns True if the specified element is not found in the sequence. Otherwise, it returns False
+The results are based on case sensitivity.
+
+Below are the examples which demonstrates the use of in and not in operators:
+````python
+s = "good morning" 
+print("m" in s)           # Result: True
+print("a" not in s)       # Result: True 
+print("z" in s)           # Result: False
+print("good" in s)        # Result: True
+print("Morning" in s)     # Result: False
+````
+
+Consider the following statements about the string str = "Coding" and select the correct options:
+
+````Answer: print('z' not in str) returns True````
+
+#### 36.2.12. Repetitions of a String
+
+We can use ( * ) operator to repeat a string several times. The format is <string> * <number>. This generates a new string containing the initial string duplicated as many times as indicated by the specified number.
+````python
+Example:
+a = "Mouse"
+print(3 * a)   # Output: MouseMouseMouse 
+print(a * 3)   # Output: MouseMouseMouse 
+b = 3
+print(((b - 2) * 2) * a)   # Output: MouseMouse (repeated 2 times) 
+Note: 3 * str is same as str * 3
+````
+
+Write a program to input a string from the user. Print the string four times and also print it thrice in reverse as shown in the sample test case.
+````python 
+Sample Input and Output:
+str: Python
+PythonPythonPythonPython
+nohtyPnohtyPnohtyP
+````
+
+#### 36.2.13. Program to print 3 copies of first three characters of a string.
+
+Write a program to take a string as input from the user. If the length of a given string is greater than or equal to 3 then print the first three characters 3 times. If not print the string as it is.
+
+Print the result as shown in the sample test cases.
+````python
+Sample Input and Output 1:
+
+str: Python
+result: PytPytPyt
+
+
+Sample Input and Output 2:
+
+str: Hi
+result: Hi
+````
+
+
+#### 36.2.14. Program to print a given string which repeats 'n' times.
+
+Write a program to take two inputs, string str and integer n from the user and print the given string str which repeats n times.
+
+Print the result as shown in the sample test case.
+
+````python
+Sample Input and Output:
+
+str: Python
+num: 5
+result: PythonPythonPythonPythonPython
+````
+
+#### 36.2.15. Program to repeat first n characters of the given string n times
+
+Write a program to read a string str, an integer n and print the first n characters of the string which repeats n times. Here integer value n works like a index of a string.
+
+Assumption:
+
+- Index n is always positive and less than the length of the string.
+- If user gives a negative index value print the error message as shown in the Sample test case 2.
+- Print the result to the console as shown in the sample test cases.
+
+````python
+Sample Input and Output 1:
+str: python
+num: 5
+result: pythopythopythopythopytho
+
+
+Sample Input and Output 2:
+str: Java
+num: -1
+num should be positive, less than length of str
+````
+
+#### 36.2.16. Understanding String Immutability
+
+Python strings are "immutable". Means, we can't reassign or change a value of a string once it is created. The [ ] operator cannot be used on the left side of an assignment.
+
+Consider the below example:
+````python
+str = "Python"
+str[0] = 'J'    # Attempt to change the 0th index 'P' with 'J'
+````
+Due to string immutability, this results a TypeError: 'str' object does not support item assignment.
+
+
+However, we can create a new string:
+````python
+newstr = "J" + str[1:]
+print(newstr)   # Output: "Jython"
+Deleting a particular character in a string is not possible. We can delete the entire string by using del.
+del str[0]      # Raises TypeError: 'str' object doesn't support item deletion
+del str
+print(str)      # Raises NameError: name 'str' is not defined
+````
+After deleting a string variable, trying to access it leads to NameError due to the variable's deletion.
+
+In Python, why does attempting to delete a character at a specific index within a string result in an error?
+
+````Answer: Deleting characters within strings violates the immutability principle of strings.````

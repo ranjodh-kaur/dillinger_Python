@@ -588,7 +588,27 @@ replace_new = input("new substring: ")
 print(str1.replace(replace_old,replace_new))
 ````
 
+#### 37.1.3. Methods Of Strings - isupper(), islower(), isalpha(), isalnum()
 
+11) isupper() - Checks if all characters in the string are uppercase or not. If yes returns True, otherwise False.
+
+12) islower() - Checks if all characters in the string are lowercase or not. If yes returns True, otherwise False.
+
+13) isalpha() - Checks if the string contains alphabetic characters only or not. If yes returns True, otherwise False.
+Space is not considered as alphabet character, it will fall in the category of special characters.
+
+14) isalnum() - Checks if the string contains alphanumeric characters only or not. If yes returns True, otherwise False.
+Characters those are not alphanumeric are: (space) ! # % & ? etc.
+Numerals (0-9), alphabets (A-Z, a-z) will fall into the category of alphanumeric characters.
+
+Now, let's understand these methods with small example. Assume there is an string ````python a = "HELLOWORLD123"````. Observe the output:
+````python
+print(a.isupper())     # Result: True
+print(a.islower())     # Result: False
+print(a.isalpha())     # Result: False
+print(a.isalnum())     # Result: True
+````
+Select all the correct statements among the provided options.
  
 
 

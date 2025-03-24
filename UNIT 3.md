@@ -15,9 +15,11 @@ Write a code snippet that prompts the user to input a string using the input() f
 
 **Sample Input and Output:**
 
-````str: Strings in Python are immutable````
+````
+str: Strings in Python are immutable
 
-````Strings in Python are immutable````
+Strings in Python are immutable
+````
 
 ````python
 str=input("str: ")
@@ -54,7 +56,7 @@ You're required to create a program that takes a string input from the user. Onc
 3. Prints the second character of string from the end.
 
 Sample Input and Output:
-````python
+````
 String: Python Programming
 Python Programming
 Second character from first: y
@@ -130,8 +132,8 @@ Write a program to take string as input from the user using input() function. Re
 
 Print the result as shown in the sample test case.
 
-````python
 Sample Input and Output:
+````
 Input str: Python
 output: ytho
 ````
@@ -149,7 +151,7 @@ Concatenation of strings refers to the process of linking or combining two strin
 **Write a program to take two strings as input from the console using input() function. Concatenate those two strings and print the result as shown in the sample test case.**
 
 Sample Input and Output:
-````python
+````
 str1: Python
 str2: Jython
 Python Jython
@@ -167,7 +169,7 @@ Write a program that takes two input strings str1 and str2 and returns the resul
 
 Print the result as shown in the sample test case.
 
-````python
+````
 Sample Input and Output:
 str1: Code
 str2: Tantra
@@ -188,17 +190,15 @@ Write a program to remove a character from a string based on integer value given
 
 Print the result as shown in the sample test cases.
 
-
-````python
 Sample Input and Output 1:
-
+````
 str: Python Programming
 num: 9
 Python Prgramming
 ````
-````python
-Sample Input and Output 2:
 
+Sample Input and Output 2:
+````
 str: Strings
 num: 10
 num should be positive, less than the length of str
@@ -217,13 +217,14 @@ else:
 
 Write a program to take two strings as input from the user. Concatenate those two strings by removing the first character from both and print the result as shown in the sample test case.
 
-````python
+
 Sample Input and Output 1:
+````
 str1: Python
 str2: Java
 output: ythonava
-
-
+````
+````
 Sample Input and Output 2:
 str1: a
 str2: b
@@ -249,15 +250,15 @@ Follow the below constraints while writing the program:
 - If the length of the string is 1 then print the input string as it is.
 - If the length of the string is 0 (zero) then print null as output.
 
-````python
-Sample Input and Output 1:
 
+Sample Input and Output 1:
+````
 Input str: Active
 output: ectivA
-
+````
 
 Sample Input and Output 2:
-
+````
 Input str: T
 output: T
 ````
@@ -281,13 +282,15 @@ Write a program to take a string as input from the user. Print the first and las
 
 Print the result as shown in the sample test case.
 
-````python
+
 Sample Input and Output 1:
+````
 input: Code Tantra
 output: Cora
-
+````
 
 Sample Input and Output 2:
+````
 input: hi
 output: hi
 ````
@@ -324,8 +327,9 @@ Consider the following statements about the string str = "Coding" and select the
 #### 36.2.12. Repetitions of a String
 
 We can use ( * ) operator to repeat a string several times. The format is <string> * <number>. This generates a new string containing the initial string duplicated as many times as indicated by the specified number.
-````python
-Example:
+
+**Example:**
+````
 a = "Mouse"
 print(3 * a)   # Output: MouseMouseMouse 
 print(a * 3)   # Output: MouseMouseMouse 
@@ -335,8 +339,9 @@ Note: 3 * str is same as str * 3
 ````
 
 Write a program to input a string from the user. Print the string four times and also print it thrice in reverse as shown in the sample test case.
-````python 
+
 Sample Input and Output:
+````
 str: Python
 PythonPythonPythonPython
 nohtyPnohtyPnohtyP
@@ -352,19 +357,27 @@ print(str[-1::-1]*3)
 Write a program to take a string as input from the user. If the length of a given string is greater than or equal to 3 then print the first three characters 3 times. If not print the string as it is.
 
 Print the result as shown in the sample test cases.
-````python
-Sample Input and Output 1:
 
+Sample Input and Output 1:
+````
 str: Python
 result: PytPytPyt
-
+````
 
 Sample Input and Output 2:
-
+````
 str: Hi
 result: Hi
 ````
 
+````python
+# Type your content here...
+str=input("str: ")
+if len(str)>=3:
+	print("result:",str[0:3]*3)
+else:
+	print("result:",str)
+````
 
 #### 36.2.14. Program to print a given string which repeats 'n' times.
 
@@ -372,9 +385,9 @@ Write a program to take two inputs, string str and integer n from the user and p
 
 Print the result as shown in the sample test case.
 
-````python
-Sample Input and Output:
 
+Sample Input and Output:
+````
 str: Python
 num: 5
 result: PythonPythonPythonPythonPython
@@ -390,14 +403,16 @@ Assumption:
 - If user gives a negative index value print the error message as shown in the Sample test case 2.
 - Print the result to the console as shown in the sample test cases.
 
-````python
+
 Sample Input and Output 1:
+````
 str: python
 num: 5
 result: pythopythopythopythopytho
-
+````
 
 Sample Input and Output 2:
+````
 str: Java
 num: -1
 num should be positive, less than length of str

@@ -520,3 +520,31 @@ Answer:
 print('abcpyxyzpython', 3, 10) - Outputs: abcpyxyzpython 3 10.
 ````
 
+#### 37.1.2. Methods Of Strings - count(), replace(), join()
+
+Consider an input string 
+````python
+a = "hello happy birthday happy birthday life is happy",
+````
+ let's understand the working principles of the following methods:
+
+8) count(substring) - Returns the count of occurrences of the substring in a string. If the substring does not exist, it returns zero.
+````python
+print(a.count('happy'))     # Result: 3 (happy word occurred 3 times)
+````
+
+9) replace(old, new) - Replace all occurrences of old substring with new substring. If the old substring does not exist, no modifications will be done.
+````python
+print(a.replace('happy' ,'joyful'))   # Result: 'hello joyful birthday joyful birthday life is joyful'
+````
+
+10) join(iterable) - Concatenate the elements of the iterable using the string as the separator. (“L1” is iterable in the below example.)
+````python
+b = '.'
+L1 = ["www", "codetantra", "com"]
+print(b.join(L1))    # Concatenates each item in the list with '.' Result: 'www.codetantra.com'
+````
+
+**Write a program to demonstrate string methods using a user input. Follow the instructions provided in the comment lines.**
+
+Print the result as shown in the sample test cases.

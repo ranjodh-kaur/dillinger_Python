@@ -392,6 +392,12 @@ str: Python
 num: 5
 result: PythonPythonPythonPythonPython
 ````
+````python
+# Type your content here...
+str=input("str: ")
+n=int(input("num: "))
+print("result:",str*n)
+````
 
 #### 36.2.15. Program to repeat first n characters of the given string n times
 
@@ -416,6 +422,17 @@ Sample Input and Output 2:
 str: Java
 num: -1
 num should be positive, less than length of str
+````
+
+````python
+# Type your code here...
+str=input("str: ")
+n=int(input("num: "))
+if n>0 and n<len(str):
+	print("result:",str[0:n]*n)
+else:
+	print("num should be positive, less than length of str")
+
 ````
 
 #### 36.2.16. Understanding String Immutability

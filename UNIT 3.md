@@ -548,3 +548,31 @@ print(b.join(L1))    # Concatenates each item in the list with '.' Result: 'www.
 **Write a program to demonstrate string methods using a user input. Follow the instructions provided in the comment lines.**
 
 Print the result as shown in the sample test cases.
+
+````python
+str1 = input("str: ")
+# Convert the string to uppercase
+print(str1.upper())
+# Convert the string to title case
+print(str1.title())
+# Split the string into a list of words
+print(str1.split())
+width = int(input("width: "))
+fill_char = input("fillchar: ")
+# Center align the string with given width and fill character
+print(str1.center(width, fill_char))
+# Convert the string to lowercase
+print(str1.lower())
+str2 = input("Enter a joining character: ")
+# Join the characters of the string with the given character
+print(str2.join(str1))
+replace_old = input("old substring: ")
+replace_new = input("new substring: ")
+# Replace occurrences of old substring with new substring
+print(str1.replace(replace_old,replace_new))
+````
+
+
+ 
+
+

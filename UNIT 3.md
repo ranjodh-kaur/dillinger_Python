@@ -825,7 +825,7 @@ Sample Input and Output 2:
 str: World
 str after adding 'Python': Python World
 ````
-# Note: Python and python are different.
+###### Note: Python and python are different.
 
 ````python
 str = input("str: ")

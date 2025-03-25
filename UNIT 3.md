@@ -610,5 +610,355 @@ print(a.isalnum())     # Result: True
 ````
 Select all the correct statements among the provided options.
  
+- print("Hello123".isalpha()) returns False.
+- str = '123', the below code is correct to convert string into int. print(int(str)) # 123.
+- str = "hello world", print(str.isalnum()) returns False.
 
+#### 37.1.4. Methods of Strings - isdigit(), isspace(), istitle()
 
+15) isdigit() - Checks if the string contains only digits or not. If yes returns True, otherwise False.
+````python
+a = "123hello"
+print(a.isdigit())    # Result : False
+````
+
+16) isspace() - Checks whether the string contains only spaces or not. If yes returns True, otherwise False.
+````python
+a = "       "
+print(a.isspace())    # Result: True
+a = " h "
+print(a.isspace())    # Result : False
+````
+
+17) istitle() - Checks whether every word of a string starts with upper case letter or not.
+````python
+a = "Hello Python"
+print(a.istitle())    # Result: True
+````
+
+Given an incomplete program. Your task is to complete the if conditions which performs specific checks on the input string and display the corresponding messages.
+
+````python
+str = input("str: ")
+# Complete below condition and check whether string contains only digits or not.
+if str.isdigit():
+	print("str contains only digits")
+else:
+	print("str does not contains only digits")
+
+# Complete below condition and check whether string contains only spaces or not.
+if str.isspace():
+	print("str contains only space")
+else:
+	print("str does not contains only space")
+
+# Complete below condition and check if the string is in title case or not.
+if str.istitle():
+	print("str is in title case")
+else:
+	print("str is not in title case")
+````
+
+#### 37.1.5. Escape Sequences in Strings
+
+Escape characters are used to solve the problem of using special characters inside a string declaration. It directs the interpreter to take suitable actions mapped to that character. We denote escape characters with a backslash (\) at the beginning.
+
+Let us discuss escape characters one by one:
+````python
+\n - Used for providing a new line.
+print("hello\npython")      
+hello                   # Output
+python
+````
+````python
+\\ - Used to represent backslash. It returns one single backslash.
+print("hello\\how are you")  
+hello\how are you       # Output 
+````
+
+````python
+\' - Used to print a Single Quote( ' ).
+print("It\'s very powerful") 
+It's very powerful      # Output
+````
+
+````python
+\" - Used to represent double Quote( " ).
+print("We can represent Strings using \" ") 
+We can represent Strings using " # Output
+````
+
+````python
+ \t is used to provide a tab space.
+print("Hello\tPython") 
+Hello	Python          # Output
+````
+Which of the following code will generate the displayed text.
+This is a string with a double quote character.
+
+````python
+print("This is a string with a double quote character.")
+````
+
+#### 37.1.6. Escape Sequences
+
+Escape sequences can sometimes be printed as they are, without being treated as special characters. To achieve this, you can use the repr() function or the r / R prefix.
+````python
+Example using repr():
+str = "Hello\tPython\nPython is very interesting"
+print(str)  # will print result as follows
+Hello       Python       
+Python is very interesting
+
+print(repr(str)) # will print result as follows
+'Hello\tPython\nPython is very interesting'
+
+Example using 'r' and 'R':
+print(r"Hello\tPython\nPython is very interesting")  # will print result as follows
+Hello\tPython\nPython is very interesting
+
+print(R"Hello\tPython\nPython is very interesting") # will print result as follows
+Hello\tPython\nPython is very interesting 
+````
+
+Which of the following statements about escape sequences in Python is true?
+- Escape sequences can be printed as they are, without being interpreted as special characters, by using the repr() function or the r / R prefix.
+
+#### 37.1.7. Methods of Strings - startswith(), endswith(), find(), len(), min(), max()
+
+Consider a string a = "hello python", Let us explore more string methods:
+
+18) startswith(substring) - Checks whether the main string starts with given sub string. If yes it returns True, otherwise False.
+````print(a.startswith('h'))  # Result: True````
+
+19) endswith(substring) - Checks whether the string ends with the substring or not.
+````print(a.endswith('n'))    # Result: True````
+
+20) find(substring) - Returns the index of the first occurrence of the substring, if it is found, otherwise it returns -1
+````print(a.find('py'))       # Result: 6````
+````print(a.find('java'))     # Result: -1````
+
+21) len() - Returns the length of the string.
+````print(len(a))          # Result: 12````
+
+22) min() - Returns the minimum character in the string
+````print(min(a))          # Result: ''````
+Here it returns white space because in the given string white space is the minimum of all characters.
+
+23) max() - Returns the maximum character in the string.
+````print(max(a))         # Result: y````
+
+Given an incomplete code which demonstrates about string methods. Your task is to fill the necessary parts as instructed in the comment lines.
+
+Print the result as shown in the sample test cases.
+````python
+str = input("str: ")
+start_substring = input("start_substring: ")
+end_substring = input("end_substring: ")
+search_substring = input("search_substring: ")
+
+print(str.startswith(start_substring)) # Check if the string starts with the given starting substring
+print( str.endswith(end_substring) ) # Check if the string ends with the given ending substring
+print(str.find(search_substring) ) # Find and display the index of the search substring
+print(len(str)  ) # Display length of the main string
+print( min(str) ) # Display the minimum character in main string
+print( max(str) ) # Display the maximum character in main string
+````
+
+#### 37.1.8. Program to enclose the longer string with-in the shorter string and display the result.
+
+Write a program to take two strings of different lengths as input from the user and enclose the longer string with-in the shorter string.
+
+Print the result as shown in the sample test cases.
+
+Sample Input and Output 1:
+````
+str1: Big Data
+str2: Hadoop
+HadoopBig DataHadoop
+Here, len(Big Data) is 8 and len(Hadoop) is 6 so Big Data is enclosed with Hadoop.
+````
+
+Sample Input and Output 2:
+````
+str1: Django
+str2: Django
+strings are same length
+````
+
+````python
+str1 = input("str1: ")
+str2 = input("str2: ")
+
+# Calculate the lengths of the input strings
+l1 = len(str1)
+l2 = len(str2)
+
+# Print strings are equal if the both lengths are equal
+if l1==l2:
+	print("strings are same length")
+	
+# If the length of str1 is shorter than the length of str2, print the concatenation
+elif l1< l2:
+	print(str1+str2+str1)
+	
+# If the length of str1 is longer than the length of str2, print the concatenation
+else:
+	print(str2+str1+str2)
+	
+````
+
+#### 37.1.9. Write a program to find whether a given string starts with 'Python' or not.
+
+Write a program to take string as input from the user and check whether the given input begins with Python or not. If yes, print the input string as it is, otherwise add Python to input string.
+
+Print the result as shown in the sample test cases.
+
+Sample Input and Output 1:
+````
+str: Python
+str is: Python
+````
+
+Sample Input and Output 2:
+````
+str: World
+str after adding 'Python': Python World
+````
+# Note: Python and python are different.
+
+````python
+str = input("str: ")
+# write yur code here
+if str.startswith("Python"):
+    print("str is:",str)
+else:
+    print("str after adding 'Python':","Python " + str)
+````
+
+#### 37.1.10. More String methods
+
+A module is a file containing Python definitions, functions and statements.Standard library of Python is extended as modules. To use modules, we need to import them. After importing a module, we can use its functions and variables in our code. Python offers numerous standard modules. We will learn about modules in detail later.
+
+Syntax:
+````python
+import module_name
+Here we use all functions of the string module.
+import string
+print(string.punctuation) # Result: !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+print(string.digits)      # Result: 0123456789
+print(string.printable)   # Result: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+print(string.capwords('hello python')) # Result: Hello Python
+print(string.hexdigits)   # Result: 0123456789abcdefABCDEF
+print(string.octdigits)   # Result: 01234567
+````
+For more information on string module refer to: String Modules
+
+Write a program to take string as input from the user and reverse the given string using slicing operator(:).
+
+Hint: Recall the previous lessons.
+
+Sample Input and Output:
+````
+str: Strings in python are immutable
+elbatummi era nohtyp ni sgnirtS
+````
+
+````python
+# Take a string input form the user
+str=input("str: ")
+l=len(str)
+# Reverse the string using slicing operator
+print(str[::-1])
+````
+
+#### 37.1.11. Write a program to remove all digit in given string.
+
+Below given is the program to remove all punctuation's in a string and print the result.
+````python
+import string
+punctuations = string.punctuation
+result = " "
+str = "List - []\n tuple - ()\n Dictionary - {}\n Comment - #\n Multiply - *\n not - !\n and - &\n or - |\n format specifier - %\n String - " " $ @ ; : ' / + = "  
+for i in str:
+	if i not in punctuations:
+		result = result + i
+print("String after removing all Punctuation's:", result)
+````
+Here,
+We are importing string module to know the list of punctuation's using string.punctuation.
+-  Then we compare punctuations in the given string with the string.punctuation module and remove them from the input string and print the resultant string.
+-  str variable contains input string.
+- for clause to iterate over the list of characters in the input string.
+- if condition to check if a punctuation of the input string exists in punctuation variable or not.
+
+Output:
+- Set of punctuations in string.punctuation is: !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+- String after removing all Punctuation's is:  List  
+ tuple  
+ Dictionary  
+ Comment  
+ Multiply  
+ not  
+ and  
+ or  
+ format specifier  
+ String           
+
+Now build a program to take string (combination of characters and digits) as input from the user and remove all the digits from the given string.
+````python
+# import string module
+import string
+str = input("str: ")  
+result = ""  # Initializing an empty string to store the result
+
+d=string.digits
+# Iterate through each character in string (str), and if the character is not a digit, add it to the result.
+for i in str:
+	if i not in d:
+		result = result + i
+
+# Print the result after removing all digits
+print("String after removing all digits:", result )
+````
+
+#### 37.1.12. Write a program to find number of times a particular sub string appears in a given string.
+
+Write a program to count the number of times the second string occurs in the first string.
+
+Print the result to the console as shown in the sample test case.
+
+Sample Input and Output:
+````
+str1: Python is easy programming
+str2: easy
+count: 1
+````
+````python
+str1 = input("str1: ")
+str2 = input("str2: ")
+print("count:",str1.count(str2)) # print the count count of str2 occured in str1
+````
+
+#### 37.1.13. Write a program to print every character of a string twice.
+
+Write a program to print every character of the given input string twice.
+
+Print the result to the console as shown in the sample test case.
+
+Sample Input and Output:
+````
+str: Lists
+result:  LLiissttss
+````
+
+````python
+str = input("str: ")
+r=""
+# write your code here to print the every character in the given string twice
+print("result:  ",end="")
+for x in str:
+	# r=r+x*2
+	r=r+"".join(x*2)
+print(r)
+````

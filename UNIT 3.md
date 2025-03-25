@@ -879,7 +879,8 @@ Below given is the program to remove all punctuation's in a string and print the
 import string
 punctuations = string.punctuation
 result = " "
-str = "List - []\n tuple - ()\n Dictionary - {}\n Comment - #\n Multiply - *\n not - !\n and - &\n or - |\n format specifier - %\n String - " " $ @ ; : ' / + = "  
+str = "List - []\n tuple - ()\n Dictionary - {}\n Comment - #\n Multiply - *\n not - !\n and - &\n or - |\n
+              format specifier - %\n String - " " $ @ ; : ' / + = "  
 for i in str:
 	if i not in punctuations:
 		result = result + i

@@ -963,3 +963,184 @@ for x in str:
 	r=r+"".join(x*2)
 print(r)
 ````
+
+#### 37.1.14. Write a program to print half of a given string.
+
+Write a program to calculate the length of the string, If the length is even print the first half of the string, if the length is odd remove the middle character.
+
+Print the second half of the string as shown in the sample test case.
+
+Sample Input and Output 1:
+````
+str: Python
+first half str of even length: Pyt
+````
+
+Sample Input and Output 2:
+````
+str: Hello World
+second half str of odd length: World
+````
+
+Sample Test Cases
+````
+Test case 1
+str:·Python	
+first·half·str·of·even·length:·Pyt⏎	
+Test case 2
+str:·PythonWorld	
+second·half·str·of·odd·length:·World⏎
+````
+
+````python
+str = input("str: ")
+
+# write your code here
+l=len(str)
+half=l//2
+if l%2==0:
+	print("first half str of even length:",str[:half])
+else:
+	print("second half str of odd length:",str[half+1:])
+````
+
+#### 37.1.15. Write a Program to print a character and skip the next character, follow this till the end of string.
+
+Write a program to divide the string into two substrings by taking the alternate characters and print both the strings. Again from these two substrings, make the original string.
+
+- If length is zero then, the program should print 'null'
+- If the length is 1 then, the program should print the message on the console as shown in the sample test case 3.
+- Print the result as shown in the sample test cases.
+
+
+
+Sample Input and Output 1:
+````
+str: Python
+first: Pto
+second: yhn
+original:  Python
+````
+Sample Input and Output 2:
+````
+str: null
+first: 
+second: 
+original:
+````
+Sample Input and Output 3:
+````
+str: H
+H
+first: H
+second: 
+original:  H
+````
+
+
+#### 37.1.16. Write a program to print each character of a string in incremental order.
+
+Write a program to print each character of a string in incremental order as shown in the sample test cases.
+
+Test case 1
+
+````
+str:·Key	
+incremental·order:·KKeKey⏎	
+````
+Test case 2
+````
+str:·Python	
+incremental·order:·PPyPytPythPythoPython
+````
+
+#### 37.1.17. Write a program to remove hyphens from a given string.
+
+Take a string as input from the user using input() function. Write a program to remove hyphens from the given string if it contains any hyphens. Print the result as shown in the example
+
+Sample Input and Output:
+````
+str with hyphens: Python-programming
+Pythonprogramming
+````
+Python provides more builtin modules Let us consider a simple example:
+````
+str = input("str with hyphens: ")
+for i in str.split('-'):
+	print(i, end = " ")
+````
+Here str variable refers a given string.
+
+- 'for clause' to iterate over the number of characters of a string.
+
+- 'split()' used to separate or break the given string based on separator and add the separated data to a string array using a defined separator.
+
+Here our separator is ' - '
+
+- If we are not specifying any separator then it takes 'white space' as default separator.
+
+- The end = ' ' is used to provide space after the end of the statement instead of a new line character.
+
+- If you don't provide end = ' ' in print() statement then all separated strings are printed on new lines one after the other like as below:
+
+- Python
+- provides
+- more
+- builtin
+- modules
+
+#### 37.1.18. Program to print ASCII values of the characters within the given range..
+
+isprintable() - This method returns True if all the characters are printable, otherwise False.
+The printable characters include alphabets, digits, symbols, punctuation and white space.
+ '\n' is not an alphabet character so isprintable() returns False.
+
+ASCII (American Standard Code for Information Interchange) is a character encoding standard that represents characters as numeric codes. Each character is assigned a unique number between 0 and 127 (or 0 to 255 in extended ASCII), allowing computers to represent and manipulate text.
+For example, the ASCII code for the letter 'A' is 65.
+
+Write a python program that takes a start and end character as input from the user and displays a table showing the ASCII codes of characters in the given range.
+If the input is not a single character, the program should display an error message as shown in the sample test case.
+
+For example, if the user enters 'A' as the start character and 'D' as the end character, the program should output the following:
+````
+Character   ASCII Code
+A           65
+B           66
+C           67
+D           68
+````
+
+#### 37.1.19. Write a program to find how many times each character is repeated in a given string.
+
+Take string as input from the console using input() function. Write a program to find how many times each character is repeated in a given string. Print each character in the string in sorted order with a number of times it is repeated as shown in the example.
+
+Sample Input and Output:
+````
+str: Hello Python!
+' '	1
+'!'	1
+'H'	1
+'P'	1
+'e'	1
+'h'	1
+'l'	2
+'n'	1
+'o'	2
+'t'	1
+'y'	1
+[' ', '!', 'H', 'P', 'e', 'h', 'l', 'n', 'o', 't', 'y']
+````
+
+#### 37.1.20. Write a program to find how many times a single digit is repeated in a given number.
+
+Write a program to find how many times a single digit is repeated in a given number, and print the result as shown in the example.
+
+Sample Input and Output:
+````
+str: 11454
+1 	 2
+4 	 2
+5 	 1
+````
+
+Note: The output should be printed in the order of the appearance of digits in the given number.

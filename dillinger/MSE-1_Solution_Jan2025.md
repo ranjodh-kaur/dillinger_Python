@@ -34,10 +34,14 @@
 **Example:**
 **Input:** 4
 **Output:**
+
 1 
-1 2 
-1 2 3 
+1 2
+
+1 2 3
+
 1 2 3 4
+
 - If any other integer is entered, the code must be able to **terminate with a message: "Signing off."** 
 
 

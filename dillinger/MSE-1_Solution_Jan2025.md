@@ -165,7 +165,7 @@ Create two dictionaries dict1 and dict2 with user-given (key, value) pairs. Perf
 - Create a copy of dict1 and print it.
 - Print the keys and values (separately) of dict1 in sorted order.
 - Update the contents of dict1 with dict2, then print the results appropriately.
-#### **Python Code:**  
+  
 ```python
 # Creating dictionaries with user input
 dict1 = {"a": 10, "b": 5, "c": 15}
@@ -217,41 +217,35 @@ print(d1)
 
 ### **Q6: Menu-Driven Program**  
 
-#### **Python Code:**  
 ```python
-def nested_list_comprehension():
-    matrix = [[j for j in range(1, i+1)] for i in range(1, 5)]
-    for row in matrix:
-        print(row)
-
-def number_pattern(n):
-    for i in range(1, n+1):
-        print(*range(1, i+1))
-
 while True:
     print("\nMenu:")
-    print("1. Nested List Comprehension")
-    print("2. Number Pattern")
-    print("Any other number to exit.")
-
+    print("1. If \"1\" is entered, must be able to illustrate nested list comprehension.")
+    print("2. If \"2\" is entered, must be able to print a number pattern ")
+    print("3. If any other integer is entered, the code must be able to terminate with a message: Signing off.”)
     choice = int(input("Enter your choice: "))
-
-    if choice == 1:
-        nested_list_comprehension()
-    elif choice == 2:
-        n = int(input("Enter a number: "))
-        number_pattern(n)
+    if choice==1:
+        table = [[i * j for j in range(1, 6)] for i in range(1, 6)]
+        # Printing the nested list in a structured way
+        for row in table:
+            print(row)
+    elif choice==2:
+        n=4
+        for i in range(1,n+1):
+            for j in range(1,i+1):
+                print(j,end=" ")
+            print()
     else:
-        print("Signing off.")
+        print("Signing Off")
         break
 ```
 
 #### **Example Run:**  
-```
-Menu:
-1. Nested List Comprehension
-2. Number Pattern
-Any other number to exit.
+```python
+1. If "1" is entered, must be able to illustrate nested list comprehension.
+2. If "2" is entered, must be able to print a number pattern 
+3. If any other integer is entered, the code must be able to terminate with a message: Signing off.
+
 Enter your choice: 2
 Enter a number: 4
 
@@ -265,21 +259,4 @@ Output:
 Enter your choice: 5
 Signing off.
 ```
-
 ---
-
-
-Q6. 
-````python
-inp=int(input("Choice: "))
-if inp==1:
-    print("nested")
-elif inp==2:
-    n=4
-    for i in range(1,n+1):
-        for j in range(1,i+1):
-            print(j,end=" ")
-        print()
-else:
-    print("Signing Off")
-````

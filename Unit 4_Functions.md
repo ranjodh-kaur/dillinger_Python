@@ -1,4 +1,4 @@
-**basics of functions in Python** with examples:
+**Basics of functions in Python** with examples:
 
 ---
 

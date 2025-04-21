@@ -116,6 +116,96 @@ print(multiply(4, 5))  # Output: 20
 
 ---
 
+ **Types of Arguments in Python Functions**—with **easy explanations and examples**.
+
+---
+
+## 🔹 1. **Positional Arguments**
+These are the most common type. The order **matters** when passing values.
+
+```python
+def greet(name, age):
+    print(f"Hello {name}, you are {age} years old.")
+
+greet("Ravi", 25)  # Correct
+# greet(25, "Ravi")  # Incorrect meaning
+```
+
+> 🔁 The arguments are matched **position by position**.
+
+---
+
+## 🔹 2. **Keyword Arguments**
+You use the **parameter name explicitly** while calling the function.
+
+```python
+def greet(name, age):
+    print(f"Hello {name}, you are {age} years old.")
+
+greet(age=25, name="Ravi")  # Order doesn't matter here
+```
+
+> ✅ Great when there are many parameters and you want to be clear.
+
+---
+
+## 🔹 3. **Default Arguments**
+You assign a **default value** to a parameter in case it's not passed.
+
+```python
+def greet(name, city="Delhi"):
+    print(f"Hello {name}, from {city}.")
+
+greet("Meena")             # Uses default city
+greet("Arjun", "Chennai")  # Overrides default
+```
+
+> 💡 Always place default arguments **after** required ones.
+
+---
+
+## 🔹 4. **Variable-Length Arguments**
+Used when the number of arguments is **not fixed**.
+
+### 🟢 `*args` → For **Non-Keyword** Variable Arguments (like a tuple)
+```python
+def add_numbers(*nums):
+    total = sum(nums)
+    print("Sum:", total)
+
+add_numbers(10, 20)
+add_numbers(1, 2, 3, 4, 5)
+```
+
+### 🟢 `**kwargs` → For **Keyword** Variable Arguments (like a dictionary)
+```python
+def print_details(**info):
+    for key, value in info.items():
+        print(f"{key}: {value}")
+
+print_details(name="Ravi", age=25, city="Mumbai")
+```
+
+> 🔁 `*args` collects extra **positional** arguments,  
+> 🔁 `**kwargs` collects extra **keyword** arguments.
+
+---
+
+## 🧠 Summary Table
+
+| Argument Type     | Syntax         | Use When...                            |
+|-------------------|----------------|----------------------------------------|
+| Positional        | `f(x, y)`      | You know the exact order               |
+| Keyword           | `f(x=10, y=20)`| You want to be explicit or reorder     |
+| Default           | `def f(x=0)`   | You want optional parameters           |
+| Variable Length   | `*args` / `**kwargs` | You want to handle many arguments |
+
+---
+
+
+
+____
+
 ### ⛏️ Scope of Variables
 
 - **Local**: Defined inside the function, used only there.
@@ -303,4 +393,94 @@ print(is_even(7))  # Output: Odd
 ```
 
 ---
+ **real-world examples and practice questions** 
+---
+
+## ✅ **Example 1: Calculator Using Functions**
+```python
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        return "Cannot divide by zero!"
+    return a / b
+
+# Usage
+print("Sum:", add(10, 5))
+print("Difference:", subtract(10, 5))
+print("Product:", multiply(10, 5))
+print("Quotient:", divide(10, 0))
+```
+
+---
+
+## ✅ **Example 2: Count Vowels in a String**
+```python
+def count_vowels(text):
+    vowels = 'aeiouAEIOU'
+    count = 0
+    for ch in text:
+        if ch in vowels:
+            count += 1
+    return count
+
+print(count_vowels("Hello World"))  # Output: 3
+```
+
+---
+
+## ✅ **Example 3: Check Prime Number**
+```python
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+print(is_prime(7))  # Output: True
+```
+
+---
+
+## ✅ **Example 4: Greet Multiple People using `*args`**
+```python
+def greet_all(*names):
+    for name in names:
+        print(f"Hello, {name}!")
+
+greet_all("Ravi", "Meena", "Arjun")
+```
+
+---
+
+## ✅ **Example 5: Use of `lambda` in Sorting**
+```python
+students = [("Arjun", 90), ("Meena", 85), ("Ravi", 92)]
+students.sort(key=lambda x: x[1])
+print(students)  # Sorted by marks
+```
+
+---
+
+## 🧠 Practice Questions for You
+
+Try writing the following programs:
+
+1. **Function to reverse a string.**
+2. **Function that takes a list and returns the sum of even numbers.**
+3. **Recursive function to compute Fibonacci sequence.**
+4. **Function to check whether a number is a palindrome.**
+5. **Use `lambda` and `filter` to get only odd numbers from a list.**
+
+---
+
 

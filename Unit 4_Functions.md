@@ -227,26 +227,19 @@ A **lambda** function is a small **short-hand** way of writing, one-line functio
 lambda arguments: expression
 ```
 
-### 🔸 Example:
+
+##  **Simple Lambda Example**
+
 ```python
 square = lambda x: x * x
 print(square(5))  # Output: 25
 ```
 
-### 🔸 Use Case:
-Often used when you need a short function just once, especially with `map()`, `filter()`, or `sorted()`.
-
 ```python
-nums = [1, 2, 3, 4]
-squares = list(map(lambda x: x ** 2, nums))
-print(squares)  # Output: [1, 4, 9, 16]
+is_even = lambda x: x % 2 == 0
+print(is_even(4))  # Output: True
 ```
 
-
-### Syntax:
-```python
-lambda arguments: expression
-```
 
 ### Example:
 ```python
@@ -260,23 +253,17 @@ def add(a, b):
     return a + b
 ```
 
----
 
-##  2. **Simple Lambda Example**
-
-```python
-square = lambda x: x * x
-print(square(5))  # Output: 25
-```
+### 🔸 Use Case:
+Often used when you need a short function just once, especially with `map()`, `filter()`, or `sorted()`.
 
 ```python
-is_even = lambda x: x % 2 == 0
-print(is_even(4))  # Output: True
+nums = [1, 2, 3, 4]
+squares = list(map(lambda x: x ** 2, nums))
+print(squares)  # Output: [1, 4, 9, 16]
 ```
 
----
-
-##  3. **Understanding `map()` function**
+##  **Understanding `map()` function**
 
 - `map()` is used to **apply a function to every element** of an iterable (like a list).
 
@@ -296,7 +283,7 @@ print(squared)  # Output: [1, 4, 9, 16]
 
 ---
 
-## 🧹 4. **Understanding `filter()` function**
+## **Understanding `filter()` function**
 
 - `filter()` is used to **filter elements** from an iterable **based on a condition** (returns `True`/`False`).
 

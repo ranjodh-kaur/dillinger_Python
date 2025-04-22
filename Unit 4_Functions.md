@@ -220,7 +220,7 @@ print(calculator(10, 5, "subtract"))   # 5
 
 ## 🔹 1. **Lambda Functions (Anonymous Functions)**
 
-A **lambda** function is a small, one-line function **without a name**.
+A **lambda** function is a small **short-hand** way of writing, one-line function **without a name**.
 
 ### 🔸 Syntax:
 ```python
@@ -242,7 +242,88 @@ squares = list(map(lambda x: x ** 2, nums))
 print(squares)  # Output: [1, 4, 9, 16]
 ```
 
+
+### Syntax:
+```python
+lambda arguments: expression
+```
+
+### Example:
+```python
+add = lambda a, b: a + b
+print(add(2, 3))  # Output: 5
+```
+
+> 🔸 It's the same as:
+```python
+def add(a, b):
+    return a + b
+```
+
 ---
+
+##  2. **Simple Lambda Example**
+
+```python
+square = lambda x: x * x
+print(square(5))  # Output: 25
+```
+
+```python
+is_even = lambda x: x % 2 == 0
+print(is_even(4))  # Output: True
+```
+
+---
+
+##  3. **Understanding `map()` function**
+
+- `map()` is used to **apply a function to every element** of an iterable (like a list).
+
+### Syntax:
+```python
+map(function, iterable)
+```
+
+### Example:
+```python
+numbers = [1, 2, 3, 4]
+squared = list(map(lambda x: x * x, numbers))
+print(squared)  # Output: [1, 4, 9, 16]
+```
+
+> 🔹 `map()` returns a map object, so we convert it to `list()`.
+
+---
+
+## 🧹 4. **Understanding `filter()` function**
+
+- `filter()` is used to **filter elements** from an iterable **based on a condition** (returns `True`/`False`).
+
+### Syntax:
+```python
+filter(function, iterable)
+```
+
+### Example:
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)  # Output: [2, 4, 6]
+```
+
+---
+
+
+| Concept      | Purpose                           | Example                                 |
+|--------------|-----------------------------------|-----------------------------------------|
+| `lambda`     | Small anonymous function          | `lambda x: x + 1`                        |
+| `map()`      | Apply function to each item       | `map(lambda x: x*2, [1,2,3])`           |
+| `filter()`   | Filter items based on condition   | `filter(lambda x: x>3, [1,2,3,4,5])`    |
+
+---
+
+
 
 ## 🔹 2. **Recursion**
 
@@ -334,6 +415,183 @@ print(call_func(greet, "Krishna"))  # Output: Hello, Krishna
 
 ---
 
+
+---
+
+##  1. **Fruitful Functions**
+A **fruitful function** is one that **returns a value**.
+
+###  Example:
+```python
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print("Result:", result)  # Output: 8
+```
+
+> 🔸 It returns something — so it’s “fruitful” 🍎
+
+---
+
+## 2. **Global and Local Variables**
+
+###  Local Variable:
+Declared **inside** a function — accessible only within it.
+
+```python
+def my_function():
+    x = 10  # local
+    print("Local x:", x)
+```
+
+###  Global Variable:
+Declared **outside** all functions — accessible anywhere.
+
+```python
+x = 5  # global
+
+def show():
+    print("Global x:", x)
+```
+
+###  Modifying Global Variable:
+You need to use `global` keyword.
+
+```python
+x = 5
+
+def change():
+    global x
+    x = 10
+```
+
+---
+
+##  3. **Function Composition**
+
+Combining two or more functions where the output of one becomes input to another.
+
+###  Example:
+```python
+def square(x):
+    return x * x
+
+def double(x):
+    return x * 2
+
+print(square(double(3)))  # double(3)=6 → square(6)=36
+```
+
+---
+
+##  4. **Recursion**
+
+A function calling **itself** to solve a problem.
+
+###  Example: Factorial
+```python
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n-1)
+
+print(factorial(5))  # Output: 120
+```
+
+---
+
+##  5. **Creation of Modules**
+
+A **module** is just a Python file (`.py`) containing **functions, variables, classes**, etc.
+
+###  Example: Create `mymodule.py`
+```python
+def greet(name):
+    return "Hello " + name
+```
+
+You can now use it in another file.
+
+---
+
+##  6. **Import Statement**
+
+### Syntax:
+```python
+import mymodule
+print(mymodule.greet("Alice"))
+```
+
+---
+
+##  7. **From Import Statement**
+
+###  Syntax:
+```python
+from mymodule import greet
+print(greet("Bob"))
+```
+
+You can also import multiple functions:
+```python
+from mymodule import greet, another_function
+```
+
+---
+
+## 8. **Date and Time Module**
+
+Python provides a `datetime` module for handling **dates and times**.
+
+### Basic Usage:
+```python
+import datetime
+
+now = datetime.datetime.now()
+print("Now:", now)
+
+today = datetime.date.today()
+print("Today:", today)
+
+print("Year:", now.year)
+print("Month:", now.month)
+print("Day:", now.day)
+```
+
+### Formatting Date:
+```python
+print(now.strftime("%d-%m-%Y %H:%M:%S"))
+```
+
+---
+
+## Recap Table
+
+| Concept               | Description                                | Example |
+|----------------------|--------------------------------------------|---------|
+| Fruitful Function     | Returns value                              | `return a + b` |
+| Global Variable       | Outside function                           | `x = 5` |
+| Local Variable        | Inside function                            | `x = 10` |
+| Function Composition  | One function inside another                | `f(g(x))` |
+| Recursion             | Function calls itself                      | `factorial()` |
+| Module                | Python file with functions                 | `import mymodule` |
+| Import Statement      | Imports entire module                      | `import mymodule` |
+| From Import           | Imports specific function                  | `from mymodule import greet` |
+| datetime Module       | Handles date and time                      | `datetime.now()` |
+
+---
+
+
+
+
+
+
+
+
+
+
+
 ---
 
 ##  Mini Quiz (Basics of Functions)
@@ -364,14 +622,14 @@ d) `function square(x): return x * x`
 
 ---
 
-## 💻 Coding Challenge
+## Coding Challenge
 
 Write a Python function named `is_even()` that:
 - Accepts a number as input
 - Returns `"Even"` if the number is even
 - Returns `"Odd"` if the number is odd
 
-📌 **Sample Output:**
+ **Sample Output:**
 ```python
 print(is_even(4))  # Output: Even
 print(is_even(7))  # Output: Odd

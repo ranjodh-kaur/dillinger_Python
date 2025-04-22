@@ -2,7 +2,7 @@
 
 ---
 
-## 🧠 What is a Function?
+##  What is a Function?
 A **function** is a **block of reusable code** that performs a specific task.
 
 ---
@@ -86,7 +86,7 @@ print(multiply(4, 5))  # Output: 20
 ---
 
 
-### 🧮 Types of Arguments
+###  Types of Arguments
 
 1. **Positional Arguments** (Order matters)
 2. **Keyword Arguments** (Use names)
@@ -131,7 +131,7 @@ greet("Ravi", 25)  # Correct
 # greet(25, "Ravi")  # Incorrect meaning
 ```
 
-> 🔁 The arguments are matched **position by position**.
+> The arguments are matched **position by position**.
 
 ---
 
@@ -145,7 +145,7 @@ def greet(name, age):
 greet(age=25, name="Ravi")  # Order doesn't matter here
 ```
 
-> ✅ Great when there are many parameters and you want to be clear.
+
 
 ---
 
@@ -191,7 +191,7 @@ print_details(name="Ravi", age=25, city="Mumbai")
 
 ---
 
-## 🧠 Summary Table
+## Summary Table
 
 | Argument Type     | Syntax         | Use When...                            |
 |-------------------|----------------|----------------------------------------|
@@ -351,7 +351,7 @@ print(call_func(greet, "Krishna"))  # Output: Hello, Krishna
 
 ---
 
-## 🧠 Mini Quiz (Basics of Functions)
+##  Mini Quiz (Basics of Functions)
 
 **Q1.** What keyword is used to define a function in Python?  
 a) function  
@@ -471,7 +471,7 @@ print(students)  # Sorted by marks
 
 ---
 
-## 🧠 Practice Questions for You
+## Practice Questions for You
 
 Try writing the following programs:
 

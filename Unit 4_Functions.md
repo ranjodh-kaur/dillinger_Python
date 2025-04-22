@@ -89,39 +89,7 @@ print(multiply(4, 5))  # Output: 20
 ###  Types of Arguments
 
 1. **Positional Arguments** (Order matters)
-2. **Keyword Arguments** (Use names)
-   ```python
-   def display(name, age):
-       print(name, age)
-
-   display(age=25, name="Ravi")  # Keyword
-   ```
-3. **Default Arguments**
-   ```python
-   def greet(name="Guest"):
-       print("Hello", name)
-
-   greet()  # Output: Hello Guest
-   ```
-4. **Variable-Length Arguments**
-   - `*args` for multiple positional arguments
-   - `**kwargs` for multiple keyword arguments
-
-   ```python
-   def total(*numbers):
-       print(sum(numbers))
-
-   total(1, 2, 3, 4)  # Output: 10
-   ```
-
----
-
- **Types of Arguments in Python Functions**—with **easy explanations and examples**.
-
----
-
-## 🔹 1. **Positional Arguments**
-These are the most common type. The order **matters** when passing values.
+   These are the most common type. The order **matters** when passing values.
 
 ```python
 def greet(name, age):
@@ -133,10 +101,15 @@ greet("Ravi", 25)  # Correct
 
 > The arguments are matched **position by position**.
 
----
+2. **Keyword Arguments** (Use names)
+   ```python
+   def display(name, age):
+       print(name, age)
 
-## 🔹 2. **Keyword Arguments**
-You use the **parameter name explicitly** while calling the function.
+   display(age=25, name="Ravi")  # Keyword
+   ```
+
+   You use the **parameter name explicitly** while calling the function.
 
 ```python
 def greet(name, age):
@@ -145,11 +118,13 @@ def greet(name, age):
 greet(age=25, name="Ravi")  # Order doesn't matter here
 ```
 
+3. **Default Arguments**
+   ```python
+   def greet(name="Guest"):
+       print("Hello", name)
 
-
----
-
-## 🔹 3. **Default Arguments**
+   greet()  # Output: Hello Guest
+   ```
 You assign a **default value** to a parameter in case it's not passed.
 
 ```python
@@ -162,9 +137,17 @@ greet("Arjun", "Chennai")  # Overrides default
 
 > 💡 Always place default arguments **after** required ones.
 
----
+   
+4. **Variable-Length Arguments**
+   - `*args` for multiple positional arguments
+   - `**kwargs` for multiple keyword arguments
 
-## 🔹 4. **Variable-Length Arguments**
+   ```python
+   def total(*numbers):
+       print(sum(numbers))
+
+   total(1, 2, 3, 4)  # Output: 10
+   ```
 Used when the number of arguments is **not fixed**.
 
 ### 🟢 `*args` → For **Non-Keyword** Variable Arguments (like a tuple)
@@ -176,6 +159,8 @@ def add_numbers(*nums):
 add_numbers(10, 20)
 add_numbers(1, 2, 3, 4, 5)
 ```
+
+
 
 ### 🟢 `**kwargs` → For **Keyword** Variable Arguments (like a dictionary)
 ```python

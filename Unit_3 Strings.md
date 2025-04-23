@@ -107,6 +107,12 @@ Imagine you want to find all phone numbers, emails, or words starting with capit
 | `\`            | Escape special characters                | `\.` matches a dot `.`              |
 | `|`            | OR operator                              | `cat|dog` matches `cat` or `dog`    |
 | `()`           | Grouping and capturing                   | `(ab)+` matches `ab`, `abab`, etc   |
+| `{n,m}`            | Matches between `n` and `m` occurrences                    | `a{2,4}` → matches `aa`, `aaa`, `aaaa` |
+| `\d`               | Matches any digit (0–9)                                    | `\d+` → matches any number         |
+| `\w`               | Matches any word character (letters, digits, underscore)   | `\w+` → matches `hello123`         |
+| `\s`               | Matches any whitespace character                            | `\s+` → matches spaces or tabs     |
+| `\b`               | Matches a word boundary                                     | `\bcat\b` → matches `cat`          |
+| `\B`               | Matches a non-word boundary                                 | `\Bcat\B` → matches `scat`, `cats` |
 
 ---
 

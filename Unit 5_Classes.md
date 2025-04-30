@@ -186,6 +186,7 @@ dog2.bark()  # Bruno is barking!
 
 ###  Concept:
 - `self` refers to the current object (like saying "myself").
+-  Imagine saying "I" inside a person—self is how objects refer to themselves.
 
 ```python
 class Student:
@@ -197,6 +198,15 @@ s.set_name("Bob")
 print(s.name)
 ```
 
+```python
+class Animal:
+    def set_name(self, name):
+        self.name = name
+
+a = Animal()
+a.set_name("Dog")
+print(a.name)
+```
 ---
 
 ##  Chapter 4: Constructors and the `__init__()` Method

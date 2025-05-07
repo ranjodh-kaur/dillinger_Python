@@ -1,7 +1,9 @@
 # Python Syllabus
 
-Contents
-PART-A
+#### Contents
+
+#### PART-A
+
 #### Unit 1: Introduction to Python                                                                   
 Python: Language Features, Types of Errors, Comments, Identifiers and Keywords, Variables and Assignment, Expressions and Statements, Indentation, Different Data Types: Numbers, Strings, lists, sets, tuples, dictionaries. Data Type Conversions, Input and Output Statements, Arithmetic Operators, Comparison Operators, Assignment Operators, Bitwise Operators, Logical Operators, Membership Operators, Identity Operators, Operators Precedence, If Statement, If-else Statement, If-elif-else Statement, While Loop, for Loop, Break Statement, Continue Statement.
 
